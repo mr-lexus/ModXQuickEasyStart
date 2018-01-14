@@ -1,0 +1,36 @@
+Changelog for TinyMCE Rich Text Editor.
+
+TinyMCE Rich Text Editor 1.2.1
+==============
+- Escaped special HTML chars in the modxlink plugin
+- Fixing 'Media browser does not close when clicking on close'
+- Added language strings for the system settings added in 1.2.0
+
+TinyMCE Rich Text Editor 1.2.0
+==============
+- Added `relative_urls` & `remove_script_host` settings
+- Plugin now makes use of `modManagerController::addJavascript` instead of `modX::regClientStartupScript`
+- Added system setting to define 'valid_elements'
+- Added 'links_across_contexts' setting to limit links to the current context resources
+- Added support for configured default Media Source in context settings
+- CMPs can now pass any TinyMCE configuration property using the `OnRichTextEditorInit` system event
+- Upgraded to TinyMCE 4.5.7
+
+TinyMCE Rich Text Editor 1.1.1
+==============
+- Allow base path parsing in the external_config system setting
+- Add tel: prefix
+- Add modximage - left/right image positioning
+- Sync tinymce and textarea
+- Add modx skin (Credits goes to fourroses666)
+- Add skin system setting
+
+TinyMCE Rich Text Editor 1.1.0
+==============
+- Add autocomplete search for links
+- Add external config
+- Support for link classes
+
+TinyMCE Rich Text Editor 1.0.0
+==============
+- Initial release.

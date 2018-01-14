@@ -105,9 +105,18 @@
     array (
       11 => '11',
     ),
+    'OnRichTextBrowserInit' => 
+    array (
+      20 => '20',
+    ),
+    'OnRichTextEditorInit' => 
+    array (
+      20 => '20',
+    ),
     'OnRichTextEditorRegister' => 
     array (
       1 => '1',
+      20 => '20',
     ),
     'OnSiteRefresh' => 
     array (
@@ -1118,6 +1127,47 @@ if(is_file($autoloader)) {
       'moduleguid' => '',
       'static' => '0',
       'static_file' => 'core/components/composerconsole/elements/plugins/plugin.autoload.php',
+    ),
+    20 => 
+    array (
+      'id' => '20',
+      'source' => '0',
+      'property_preprocess' => '0',
+      'name' => 'TinyMCERTE',
+      'description' => '',
+      'editor_type' => '0',
+      'category' => '30',
+      'cache_type' => '0',
+      'plugincode' => '/**
+ * TinyMCE Rich Tech Editor
+ *
+ */
+$corePath = $modx->getOption(\'tinymcerte.core_path\', null, $modx->getOption(\'core_path\', null, MODX_CORE_PATH) . \'components/tinymcerte/\');
+/** @var TinyMCERTE $tinymcerte */
+$tinymcerte = $modx->getService(
+    \'tinymcerte\',
+    \'TinyMCERTE\',
+    $corePath . \'model/tinymcerte/\',
+    array(
+        \'core_path\' => $corePath
+    )
+);
+
+$className = \'TinyMCERTE\' . $modx->event->name;
+$modx->loadClass(\'TinyMCERTEPlugin\', $tinymcerte->getOption(\'modelPath\') . \'tinymcerte/events/\', true, true);
+$modx->loadClass($className, $tinymcerte->getOption(\'modelPath\') . \'tinymcerte/events/\', true, true);
+if (class_exists($className)) {
+    /** @var TinyMCERTEPlugin $handler */
+    $handler = new $className($modx, $scriptProperties);
+    $handler->run();
+}
+return;',
+      'locked' => '0',
+      'properties' => 'a:0:{}',
+      'disabled' => '0',
+      'moduleguid' => '',
+      'static' => '0',
+      'static_file' => '',
     ),
   ),
   'policies' => 
