@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'modxsmarty',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'fe7ecddfb89375398c007d81238caaf2',
+  'package' => 'modx',
+  'class' => 'modNamespace',
+  'signature' => 'e651a7f44c5e831dd11a10aa305c4961',
+  'native_key' => 'modxsmarty',
+  'object' => '{"name":"modxsmarty","path":"{core_path}components\\/modxsmarty\\/","assets_path":"{assets_path}components\\/modxsmarty\\/"}',
+);

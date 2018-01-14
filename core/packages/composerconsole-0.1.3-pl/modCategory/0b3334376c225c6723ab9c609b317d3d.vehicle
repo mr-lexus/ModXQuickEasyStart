@@ -1,0 +1,94 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '3f5d3c2b18324bec7875079f724613d5' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"autoload","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"$autoloader = $modx->getOption(\'composerconsole.composer_dir\').\'\\/vendor\\/autoload.php\';\\r\\nif(is_file($autoloader)) {\\r\\n    require_once $autoloader;\\r\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/composerconsole\\/elements\\/plugins\\/plugin.autoload.php","content":"$autoloader = $modx->getOption(\'composerconsole.composer_dir\').\'\\/vendor\\/autoload.php\';\\r\\nif(is_file($autoloader)) {\\r\\n    require_once $autoloader;\\r\\n}"}',
+        'guid' => '25af365a4dad9942dba67fff6aaa6499',
+        'native_key' => 0,
+        'signature' => 'b2f80da93147064fdfc47e08745e617d',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'db0b5ad12d59ecc7dd9470d27228d88d' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnMODXInit","priority":0,"propertyset":0}',
+              'guid' => '3f3a68c0f653021895277c7ec218a4cc',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnMODXInit',
+              ),
+              'signature' => '69d86b70a7df802fe4235c3623c879e8',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'composerconsole',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"composerconsole-0.1.3-pl\\/modCategory\\/0b3334376c225c6723ab9c609b317d3d\\/0\\/","target":"return MODX_MANAGER_PATH . \'components\\/\';","name":"composerconsole"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"composerconsole-0.1.3-pl\\/modCategory\\/0b3334376c225c6723ab9c609b317d3d\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"composerconsole"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"composerconsole-0.1.3-pl\\/modCategory\\/0b3334376c225c6723ab9c609b317d3d.resolve.extension.resolver","type":"php","name":"resolve.extension"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ae2017eee689ae938ef5a64de7f9b755',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '0b3334376c225c6723ab9c609b317d3d',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"ComposerConsole","rank":0}',
+);

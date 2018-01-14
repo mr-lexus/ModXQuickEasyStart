@@ -1,0 +1,50 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => 
+  array (
+    'Action' => 
+    array (
+      'b35f704721015b362ef05cb80eda60a8' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'namespace',
+          1 => 'controller',
+        ),
+        'class' => 'modAction',
+        'object' => '{"id":1,"namespace":"composerconsole","controller":"index","haslayout":1,"lang_topics":"composerconsole:default","assets":"","help_url":"","parent":0,"manager":""}',
+        'guid' => 'ab5ac84009cd53d6f9ee5cda3e632729',
+        'native_key' => 1,
+        'signature' => 'd1e9ce57a571e79612d8129fa780f608',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Action' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'namespace',
+        1 => 'controller',
+      ),
+    ),
+  ),
+  'namespace' => 'composerconsole',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '655e789aca14aab0dde0c18ce0f7d3d5',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => '41ca9c8a8b30336871543a5ee9594402',
+  'native_key' => 'composerconsole',
+  'object' => '{"text":"composerconsole","parent":"components","action":1,"description":"","icon":"images\\/icons\\/plugin.gif","menuindex":0,"params":"","handler":"","permissions":"","namespace":"core"}',
+);

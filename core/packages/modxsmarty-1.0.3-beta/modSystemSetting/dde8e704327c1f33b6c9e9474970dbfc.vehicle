@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'modxsmarty',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '7fa619c20e00dc779e117ac373aa5e55',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'dde8e704327c1f33b6c9e9474970dbfc',
+  'native_key' => 'modxSmarty.caching',
+  'object' => '{"key":"modxSmarty.caching","value":"0","xtype":"combo-boolean","namespace":"modxsmarty","area":"site","editedon":null}',
+);

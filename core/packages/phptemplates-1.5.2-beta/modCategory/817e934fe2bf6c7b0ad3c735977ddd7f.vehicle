@@ -1,0 +1,119 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '8b45025b4f5a1ef6ad0746d667edaa1e' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"phpTemplates","description":"plugin for phpTemplates Extra","editor_type":0,"category":0,"cache_type":0,"plugincode":"switch($modx->event->name) {\\r\\n\\tcase \'OnManagerPageInit\':\\r\\n\\t\\t$cssFile = $modx->getOption(\'phptemplates.assets_url\',null,$modx->getOption(\'assets_url\').\'components\\/phptemplates\\/\').\'css\\/mgr\\/phptemplates.css\';\\r\\n\\t\\t$modx->regClientCSS($cssFile);\\r\\n\\tbreak;\\r\\n    \\r\\n    case \'OnLoadWebDocument\':\\r\\n        if($modx->resource instanceOf modResource\\r\\n            AND $template = $modx->resource->getOne(\'Template\') \\r\\n            AND $properties = $template->getProperties()\\r\\n            AND !empty($properties[\'phptemplates.non-cached\'])\\r\\n        ){\\r\\n            $modx->resource->setProcessed(false);\\r\\n        }\\r\\n        break;\\r\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"","content":"switch($modx->event->name) {\\r\\n\\tcase \'OnManagerPageInit\':\\r\\n\\t\\t$cssFile = $modx->getOption(\'phptemplates.assets_url\',null,$modx->getOption(\'assets_url\').\'components\\/phptemplates\\/\').\'css\\/mgr\\/phptemplates.css\';\\r\\n\\t\\t$modx->regClientCSS($cssFile);\\r\\n\\tbreak;\\r\\n    \\r\\n    case \'OnLoadWebDocument\':\\r\\n        if($modx->resource instanceOf modResource\\r\\n            AND $template = $modx->resource->getOne(\'Template\') \\r\\n            AND $properties = $template->getProperties()\\r\\n            AND !empty($properties[\'phptemplates.non-cached\'])\\r\\n        ){\\r\\n            $modx->resource->setProcessed(false);\\r\\n        }\\r\\n        break;\\r\\n}"}',
+        'guid' => '9a13dfb9ac249257451554cb6aa8815a',
+        'native_key' => NULL,
+        'signature' => '1e829adab556207172ff15a3629b15f7',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '33333aaf8eeffe28e295bd79157f75ea' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnManagerPageInit","priority":0,"propertyset":0}',
+              'guid' => '0dc2f3e4e857ed45cad4ce16c3f2b240',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnManagerPageInit',
+              ),
+              'signature' => 'fb4cb9077375b0b8f4cb9eaa691dc17a',
+            ),
+            'f6b6b1d3fde70dbabaf471e2b9e12d15' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnLoadWebDocument","priority":0,"propertyset":0}',
+              'guid' => '328115355009a0408655fec30d094623',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnLoadWebDocument',
+              ),
+              'signature' => '286b968b7152939d11caacd7db35f4c7',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'phptemplates',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"phptemplates-1.5.2-beta\\/modCategory\\/817e934fe2bf6c7b0ad3c735977ddd7f\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"phptemplates"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"phptemplates-1.5.2-beta\\/modCategory\\/817e934fe2bf6c7b0ad3c735977ddd7f\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"phptemplates"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"phptemplates-1.5.2-beta\\/modCategory\\/817e934fe2bf6c7b0ad3c735977ddd7f.resolve.templates.resolver","type":"php","name":"resolve.templates"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '3bbede13c80e0c47fc1d4a61cc6b24ef',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '817e934fe2bf6c7b0ad3c735977ddd7f',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"phpTemplates"}',
+);

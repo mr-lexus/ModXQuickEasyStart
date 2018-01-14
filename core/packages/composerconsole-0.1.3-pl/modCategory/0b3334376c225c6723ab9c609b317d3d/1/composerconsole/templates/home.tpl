@@ -1,0 +1,1 @@
+<div id="composerconsole-panel-home-div"></div>

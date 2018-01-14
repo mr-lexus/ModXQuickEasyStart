@@ -1,0 +1,244 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      'b8fb317f641166e27a5dc9f2633e1a9c' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"elementNotes","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"switch ($modx->event->name) {\\r\\n\\t\\/\\/ add the \\"Note\\" tab\\r\\n\\tcase \'OnTempFormPrerender\':\\r\\n\\t\\t$enTabs = \'modx-template-tabs\';\\r\\n\\tcase \'OnChunkFormPrerender\':\\r\\n\\t\\tif (!isset($enTabs)) $enTabs = \'modx-chunk-tabs\';\\r\\n\\tcase \'OnSnipFormPrerender\':\\r\\n\\t\\tif (!isset($enTabs)) $enTabs = \'modx-snippet-tabs\';\\r\\n\\tcase \'OnPluginFormPrerender\':\\r\\n\\t\\tif (!isset($enTabs)) $enTabs = \'modx-plugin-tabs\';\\r\\n\\t\\tif ($mode == modSystemEvent::MODE_UPD) {\\r\\n\\t\\t\\t$modx->controller->addLexiconTopic(\'elementnotes:default\');\\r\\n\\t\\t\\t$modx->controller->addJavascript($modx->getOption(\'assets_url\') . \'components\\/elementnotes\\/js\\/mgr\\/elementnotes.js\');\\r\\n\\t\\t\\t$modx->controller->addLastJavascript($modx->getOption(\'assets_url\') . \'components\\/elementnotes\\/js\\/mgr\\/widgets\\/elementnotes.panel.js\');\\r\\n\\t\\t\\t$_html = \'<script>\\r\\n\\t\\t\\t\\tvar elemNotes = {};\\r\\n\\t\\t\\t\\telemNotes.config = {\\"connector_url\\" : \\"\'.$modx->getOption(\'assets_url\').\'components\\/elementnotes\\/connector.php\\"};\\r\\n\\t\\t\\t\\tExt.onReady(function() {\\r\\n\\t\\t\\t\\t\\tMODx.addTab(\\"\'.$enTabs.\'\\",{\\r\\n\\t\\t\\t\\t\\t\\tid: \\"elementnotes-tab\\",\\r\\n\\t\\t\\t\\t\\t\\ttitle: _(\\"Notes\\"),\\r\\n\\t\\t\\t\\t\\t\\titems: [{\\r\\n\\t\\t\\t\\t\\t\\t\\txtype: \\"elementnotes-page\\",\\r\\n\\t\\t\\t\\t\\t\\t\\twidth: \\"100%\\"\\r\\n\\t\\t\\t\\t\\t\\t}]\\r\\n\\t\\t\\t\\t\\t});\\r\\n\\t\\t\\t\\t});<\\/script>\';\\r\\n\\t\\t\\t$modx->controller->addHtml($_html);\\r\\n\\t\\t}\\r\\n\\t\\tbreak;\\r\\n\\t\\/\\/ Remove the element note\\r\\n\\tcase \'OnChunkRemove\':\\r\\n\\t\\t$type = \'chunk\';\\r\\n\\t\\t$id = $chunk->id;\\r\\n\\tcase \'OnPluginRemove\':\\r\\n\\t\\tif (!isset($type)) {\\r\\n\\t\\t\\t$type = \'plugin\';\\r\\n\\t\\t\\t$id = $plugin->id;\\r\\n\\t\\t}\\r\\n\\tcase \'OnSnippetRemove\':\\r\\n\\t\\tif (!isset($type)) {\\r\\n\\t\\t\\t$type = \'snippet\';\\r\\n\\t\\t\\t$id = $snippet->id;\\r\\n\\t\\t}\\r\\n\\tcase \'OnTemplateRemove\':\\r\\n\\t\\tif (!isset($type)) {\\r\\n\\t\\t\\t$type = \'template\';\\r\\n\\t\\t\\t$id = $template->id;\\r\\n\\t\\t}\\r\\n\\r\\n\\t\\t\\/** @var elementNotes $elementNotes *\\/\\r\\n\\t\\t$elementNotes = $modx->getService(\'elementnotes\', \'elementNotes\', $modx->getOption(\'core_path\') . \'components\\/elementnotes\\/model\\/elementnotes\\/\');\\r\\n\\t\\tif (isset($type) && isset($id))\\t$elementNotes->removeNote($type,$id);\\r\\n\\t\\tbreak;\\r\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/elementnotes\\/elements\\/plugins\\/plugin.elementnotes.php","content":"switch ($modx->event->name) {\\r\\n\\t\\/\\/ add the \\"Note\\" tab\\r\\n\\tcase \'OnTempFormPrerender\':\\r\\n\\t\\t$enTabs = \'modx-template-tabs\';\\r\\n\\tcase \'OnChunkFormPrerender\':\\r\\n\\t\\tif (!isset($enTabs)) $enTabs = \'modx-chunk-tabs\';\\r\\n\\tcase \'OnSnipFormPrerender\':\\r\\n\\t\\tif (!isset($enTabs)) $enTabs = \'modx-snippet-tabs\';\\r\\n\\tcase \'OnPluginFormPrerender\':\\r\\n\\t\\tif (!isset($enTabs)) $enTabs = \'modx-plugin-tabs\';\\r\\n\\t\\tif ($mode == modSystemEvent::MODE_UPD) {\\r\\n\\t\\t\\t$modx->controller->addLexiconTopic(\'elementnotes:default\');\\r\\n\\t\\t\\t$modx->controller->addJavascript($modx->getOption(\'assets_url\') . \'components\\/elementnotes\\/js\\/mgr\\/elementnotes.js\');\\r\\n\\t\\t\\t$modx->controller->addLastJavascript($modx->getOption(\'assets_url\') . \'components\\/elementnotes\\/js\\/mgr\\/widgets\\/elementnotes.panel.js\');\\r\\n\\t\\t\\t$_html = \'<script>\\r\\n\\t\\t\\t\\tvar elemNotes = {};\\r\\n\\t\\t\\t\\telemNotes.config = {\\"connector_url\\" : \\"\'.$modx->getOption(\'assets_url\').\'components\\/elementnotes\\/connector.php\\"};\\r\\n\\t\\t\\t\\tExt.onReady(function() {\\r\\n\\t\\t\\t\\t\\tMODx.addTab(\\"\'.$enTabs.\'\\",{\\r\\n\\t\\t\\t\\t\\t\\tid: \\"elementnotes-tab\\",\\r\\n\\t\\t\\t\\t\\t\\ttitle: _(\\"Notes\\"),\\r\\n\\t\\t\\t\\t\\t\\titems: [{\\r\\n\\t\\t\\t\\t\\t\\t\\txtype: \\"elementnotes-page\\",\\r\\n\\t\\t\\t\\t\\t\\t\\twidth: \\"100%\\"\\r\\n\\t\\t\\t\\t\\t\\t}]\\r\\n\\t\\t\\t\\t\\t});\\r\\n\\t\\t\\t\\t});<\\/script>\';\\r\\n\\t\\t\\t$modx->controller->addHtml($_html);\\r\\n\\t\\t}\\r\\n\\t\\tbreak;\\r\\n\\t\\/\\/ Remove the element note\\r\\n\\tcase \'OnChunkRemove\':\\r\\n\\t\\t$type = \'chunk\';\\r\\n\\t\\t$id = $chunk->id;\\r\\n\\tcase \'OnPluginRemove\':\\r\\n\\t\\tif (!isset($type)) {\\r\\n\\t\\t\\t$type = \'plugin\';\\r\\n\\t\\t\\t$id = $plugin->id;\\r\\n\\t\\t}\\r\\n\\tcase \'OnSnippetRemove\':\\r\\n\\t\\tif (!isset($type)) {\\r\\n\\t\\t\\t$type = \'snippet\';\\r\\n\\t\\t\\t$id = $snippet->id;\\r\\n\\t\\t}\\r\\n\\tcase \'OnTemplateRemove\':\\r\\n\\t\\tif (!isset($type)) {\\r\\n\\t\\t\\t$type = \'template\';\\r\\n\\t\\t\\t$id = $template->id;\\r\\n\\t\\t}\\r\\n\\r\\n\\t\\t\\/** @var elementNotes $elementNotes *\\/\\r\\n\\t\\t$elementNotes = $modx->getService(\'elementnotes\', \'elementNotes\', $modx->getOption(\'core_path\') . \'components\\/elementnotes\\/model\\/elementnotes\\/\');\\r\\n\\t\\tif (isset($type) && isset($id))\\t$elementNotes->removeNote($type,$id);\\r\\n\\t\\tbreak;\\r\\n}"}',
+        'guid' => '34bafb78af8d902e814bd23e9c0afb9a',
+        'native_key' => NULL,
+        'signature' => 'fb2228d7beafa44145e8a7e651b0d133',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'a39c382766d403b0b7939ae3329e5998' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTempFormPrerender","priority":0,"propertyset":0}',
+              'guid' => 'ca31d4b88d7f1af383a6c8cb6cbc41e9',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTempFormPrerender',
+              ),
+              'signature' => '71dc0f8dbeed581ffa5284cb81b1979f',
+            ),
+            'de19a411be4316b78d8a2a19e5d186bd' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnChunkFormPrerender","priority":0,"propertyset":0}',
+              'guid' => '136fca2b508f90a3d75f84ecb9c130e4',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnChunkFormPrerender',
+              ),
+              'signature' => '1a7f47ebc5ffc660de4f5fb6de485fc9',
+            ),
+            '191415b4a5d63c0c4223c3a045bf9d4e' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnSnipFormPrerender","priority":0,"propertyset":0}',
+              'guid' => '5a14ecbc83a2e710418efe8917627bd2',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnSnipFormPrerender',
+              ),
+              'signature' => '304c89ce3f57ce5247296d02c362df74',
+            ),
+            '28154794e58ca6e7c478c85b45d46120' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnPluginFormPrerender","priority":0,"propertyset":0}',
+              'guid' => 'c8fbf8ba458ea25665dbf4b492eda8f5',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnPluginFormPrerender',
+              ),
+              'signature' => 'c2a621c95b1461e11412ec82bab96ca5',
+            ),
+            '9c28d1c20f8562d63facc6b29c90c70c' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnChunkRemove","priority":0,"propertyset":0}',
+              'guid' => '54e498b47424c7e1bfb51ddaf218044f',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnChunkRemove',
+              ),
+              'signature' => '1d326e3e66b6552ed6f5cd4b74b666a3',
+            ),
+            '6fedfbb34b8e8da81b185397402dd189' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnPluginRemove","priority":0,"propertyset":0}',
+              'guid' => '0b18f3a42a1878bd0bbbcffca8a38eea',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnPluginRemove',
+              ),
+              'signature' => 'e6747c59faffee646f87b55e7d6949b5',
+            ),
+            'be34fff1f885e0b4107f866d09bd1b4b' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnSnippetRemove","priority":0,"propertyset":0}',
+              'guid' => '3b8d819003bd586ee6728de6269a6552',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnSnippetRemove',
+              ),
+              'signature' => '289764bd24cee088d1994a8da90e74ac',
+            ),
+            'cc01fd21cc684d0727435751b9eb5756' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTemplateRemove","priority":0,"propertyset":0}',
+              'guid' => 'b6bf677a8a88bc7dd5764aaff93f2925',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTemplateRemove',
+              ),
+              'signature' => '4e8bd0b2c0df796c1ee38818127645f3',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => false,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'elementnotes',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"elementnotes-1.0.1-pl\\/modCategory\\/833a19c2e3426de5dba12b5fab4d69d1\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"elementnotes"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"elementnotes-1.0.1-pl\\/modCategory\\/833a19c2e3426de5dba12b5fab4d69d1\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"elementnotes"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"elementnotes-1.0.1-pl\\/modCategory\\/833a19c2e3426de5dba12b5fab4d69d1.resolve.tables.resolver","type":"php","name":"resolve.tables"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"elementnotes-1.0.1-pl\\/modCategory\\/833a19c2e3426de5dba12b5fab4d69d1.resolve.chunks.resolver","type":"php","name":"resolve.chunks"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '5d9e3f9d7a0d32f203bbcca9ac7af771',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '833a19c2e3426de5dba12b5fab4d69d1',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"elementNotes"}',
+);

@@ -1,0 +1,126 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '1b796b2992341a9c1876ccb7daf5c9d9' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '891e0ec4c7d50b285b3a6aaaec447c63' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnManagerPageInit","priority":0,"propertyset":0}',
+              'guid' => '81ef1f1b845a11a098108c3b9632ceb3',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnManagerPageInit',
+              ),
+              'signature' => 'b082691f6dc1258ed63054a67aff011d',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":1,"source":0,"property_preprocess":0,"name":"shopModx","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"switch($modx->event->name){\\n    case \'OnManagerPageInit\':\\n        if(!$assetsUrl = $modx->getOption(\'shopmodx.manager_url\',null)){\\n            $assetsUrl = $modx->getOption(\'manager_url\').\'components\\/shopmodx\\/\';\\n        }\\n        $cssFile = $assetsUrl.\'css\\/style.css\';\\n        \\n        $modx->regClientCSS($cssFile);\\n        $modx->regClientStartupScript($assetsUrl.\'js\\/core\\/shopmodx.js\');\\n        $modx->regClientStartupScript($assetsUrl.\'js\\/widgets\\/combo\\/currencies.combo.js\');\\n        \\n        $resourcesRules = array();\\n        \\n        $eventParams = array(\\n            \'params\' => array(\\n                \'resourcesRules\' => & $resourcesRules\\n            ),\\n        );\\n        \\n        $modx->invokeEvent(\'OnShopModxSetResourcesCreateRules\', $eventParams);\\n         \\n        $resourcesRulesJSON = $modx->toJSON($resourcesRules);\\n        \\n$JS = <<<JS\\n<script type=\\"text\\/javascript\\">\\nExt.onReady(function(){\\n    \\/\\/ \\u041f\\u043e\\u043b\\u0443\\u0447\\u0430\\u0435\\u043c \\u0434\\u0435\\u0440\\u0435\\u0432\\u043e\\n    var tree = Ext.getCmp(\'modx-resource-tree\');\\n    \\/\\/ \\u041e\\u043f\\u0438\\u0441\\u044b\\u0432\\u0430\\u0435\\u043c \\u043f\\u0440\\u0430\\u0432\\u0438\\u043b\\u0430 \\u0440\\u0430\\u0437\\u0440\\u0435\\u0448\\u0435\\u043d\\u043d\\u044b\\u0445 \\u0434\\u043e\\u0447\\u0435\\u0440\\u043d\\u0438\\u0445 \\u0440\\u0435\\u0441\\u0443\\u0440\\u0441\\u043e\\u0432\\n    var resourcesRules = {$resourcesRulesJSON};\\n    \\/\\/ \\u041f\\u0440\\u043e\\u043f\\u0438\\u0441\\u044b\\u0432\\u0430\\u0435\\u043c \\u0444\\u0443\\u043d\\u043a\\u0446\\u0438\\u044e \\u043a\\u043e\\u043f\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\\u0438\\u044f \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0439 \\u043e\\u0431\\u044a\\u0435\\u043a\\u0442\\u0430,\\n    \\/\\/ \\u0442\\u0430\\u043a \\u043a\\u0430\\u043a \\u0443 \\u043d\\u0430\\u0441 \\u043f\\u0440\\u043e\\u0431\\u043b\\u0435\\u043c\\u044b \\u043d\\u0430 \\u0443\\u0440\\u043e\\u0432\\u043d\\u0435 \\u0441\\u0441\\u044b\\u043b\\u043e\\u043a \\u043d\\u0430 \\u043e\\u0431\\u044a\\u0435\\u043a\\u0442\\u044b,\\n    \\/\\/ \\u0442\\u043e \\u0435\\u0441\\u0442\\u044c \\u0438\\u0437\\u043c\\u0435\\u043d\\u044f\\u044f \\u043e\\u0434\\u043d\\u0443 \\u043f\\u0435\\u0440\\u0435\\u043c\\u0435\\u043d\\u043d\\u0443\\u044e, \\u0438\\u0437\\u043c\\u0435\\u043d\\u044f\\u0435\\u0442\\u0441\\u044f \\u0438 \\u0434\\u0440\\u0443\\u0433\\u0430\\u044f, \\u0435\\u0441\\u043b\\u0438 \\u043e\\u0431\\u044a\\u0435\\u043a\\u0442 \\u043e\\u0431\\u0449\\u0438\\u0439\\n    var copyObject = function(from){\\n        var to = {};\\n        for(i in from){\\n            to[i] = from[i];\\n        }\\n        return to;\\n    }    \\n    \\/\\/ \\u0424\\u0438\\u043a\\u0441\\u0438\\u0440\\u0443\\u0435\\u043c \\u0438\\u0437\\u043d\\u0430\\u0447\\u0430\\u043b\\u044c\\u043d\\u044b\\u0439 \\u043d\\u0430\\u0431\\u043e\\u0440 \\u043a\\u043b\\u0430\\u0441\\u0441\\u043e\\u0432\\n    var classes = copyObject(MODx.config.resource_classes);\\n\\n    \\/\\/ \\u041d\\u0430\\u0432\\u0435\\u0448\\u0438\\u0432\\u0430\\u0435\\u043c \\u0444\\u0443\\u043d\\u043a\\u0446\\u0438\\u044e \\u0438\\u0437\\u043c\\u0435\\u043d\\u0435\\u043d\\u0438\\u044f \\u043d\\u0430\\u0431\\u043e\\u0440\\u0430 \\u043a\\u043b\\u0430\\u0441\\u0441\\u043e\\u0432\\n    \\/\\/ \\u043f\\u0440\\u0438 \\u0441\\u043e\\u0437\\u0434\\u0430\\u043d\\u0438\\u0438 \\u043a\\u043e\\u043d\\u0442\\u0435\\u043a\\u0441\\u0442\\u043d\\u043e\\u0433\\u043e \\u043c\\u0435\\u043d\\u044e\\n    tree.on(\'loadCreateMenus\', function(types){\\n        var node = this.getSelectionModel().getSelectedNode()\\n            ,classKey;\\n\\n        if(resourcesRules && node && node.attributes \\n                && (classKey = node.attributes.classKey)\\n                && resourcesRules[classKey]\\n        ){\\n            for(var i in types){\\n                if(!resourcesRules[classKey].in_array(i)){\\n                    delete  types[i];\\n                }\\n            }\\n        }    \\n        return true;\\n    }, tree);\\n    \\n    \\/\\/ \\u041d\\u0430\\u0432\\u0435\\u0448\\u0438\\u0432\\u0430\\u0435\\u043c \\u0444\\u0443\\u043d\\u043a\\u0446\\u0438\\u044e \\u0432\\u043e\\u0441\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043b\\u0435\\u043d\\u0438\\u044f \\u043d\\u0430\\u0431\\u043e\\u0440\\u0430 \\u043a\\u043b\\u0430\\u0441\\u0441\\u043e\\u0432\\n    \\/\\/ \\u042d\\u0442\\u0430 \\u0444\\u0443\\u043d\\u043a\\u0446\\u0438\\u044f \\u0432\\u044b\\u043f\\u043e\\u043b\\u043d\\u0438\\u0442\\u0441\\u044f \\u043f\\u043e\\u0441\\u043b\\u0435 \\u0444\\u043e\\u0440\\u043c\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\\u0438\\u044f \\u043c\\u0435\\u043d\\u044e, \\u0442\\u0430\\u043a \\u043a\\u0430\\u043a \\u043d\\u0430\\u0432\\u0435\\u0448\\u0435\\u043d\\u043e \\u043f\\u043e\\u0437\\u0436\\u0435\\n    \\/\\/ \\u0431\\u0430\\u0437\\u043e\\u0432\\u043e\\u0433\\u043e \\u043c\\u0435\\u0442\\u043e\\u0434\\u0430 \\u0434\\u0435\\u0440\\u0435\\u0432\\u0430 \\u0440\\u0435\\u0441\\u0443\\u0440\\u0441\\u043e\\u0432\\n    tree.on(\'contextmenu\', function(){\\n        MODx.config.resource_classes = copyObject(classes);\\n    });\\n}); \\n<\\/script>\\nJS;\\n        $modx->regClientStartupScript($JS, true);\\n        break;\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"","content":"switch($modx->event->name){\\n    case \'OnManagerPageInit\':\\n        if(!$assetsUrl = $modx->getOption(\'shopmodx.manager_url\',null)){\\n            $assetsUrl = $modx->getOption(\'manager_url\').\'components\\/shopmodx\\/\';\\n        }\\n        $cssFile = $assetsUrl.\'css\\/style.css\';\\n        \\n        $modx->regClientCSS($cssFile);\\n        $modx->regClientStartupScript($assetsUrl.\'js\\/core\\/shopmodx.js\');\\n        $modx->regClientStartupScript($assetsUrl.\'js\\/widgets\\/combo\\/currencies.combo.js\');\\n        \\n        $resourcesRules = array();\\n        \\n        $eventParams = array(\\n            \'params\' => array(\\n                \'resourcesRules\' => & $resourcesRules\\n            ),\\n        );\\n        \\n        $modx->invokeEvent(\'OnShopModxSetResourcesCreateRules\', $eventParams);\\n         \\n        $resourcesRulesJSON = $modx->toJSON($resourcesRules);\\n        \\n$JS = <<<JS\\n<script type=\\"text\\/javascript\\">\\nExt.onReady(function(){\\n    \\/\\/ \\u041f\\u043e\\u043b\\u0443\\u0447\\u0430\\u0435\\u043c \\u0434\\u0435\\u0440\\u0435\\u0432\\u043e\\n    var tree = Ext.getCmp(\'modx-resource-tree\');\\n    \\/\\/ \\u041e\\u043f\\u0438\\u0441\\u044b\\u0432\\u0430\\u0435\\u043c \\u043f\\u0440\\u0430\\u0432\\u0438\\u043b\\u0430 \\u0440\\u0430\\u0437\\u0440\\u0435\\u0448\\u0435\\u043d\\u043d\\u044b\\u0445 \\u0434\\u043e\\u0447\\u0435\\u0440\\u043d\\u0438\\u0445 \\u0440\\u0435\\u0441\\u0443\\u0440\\u0441\\u043e\\u0432\\n    var resourcesRules = {$resourcesRulesJSON};\\n    \\/\\/ \\u041f\\u0440\\u043e\\u043f\\u0438\\u0441\\u044b\\u0432\\u0430\\u0435\\u043c \\u0444\\u0443\\u043d\\u043a\\u0446\\u0438\\u044e \\u043a\\u043e\\u043f\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\\u0438\\u044f \\u0437\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0439 \\u043e\\u0431\\u044a\\u0435\\u043a\\u0442\\u0430,\\n    \\/\\/ \\u0442\\u0430\\u043a \\u043a\\u0430\\u043a \\u0443 \\u043d\\u0430\\u0441 \\u043f\\u0440\\u043e\\u0431\\u043b\\u0435\\u043c\\u044b \\u043d\\u0430 \\u0443\\u0440\\u043e\\u0432\\u043d\\u0435 \\u0441\\u0441\\u044b\\u043b\\u043e\\u043a \\u043d\\u0430 \\u043e\\u0431\\u044a\\u0435\\u043a\\u0442\\u044b,\\n    \\/\\/ \\u0442\\u043e \\u0435\\u0441\\u0442\\u044c \\u0438\\u0437\\u043c\\u0435\\u043d\\u044f\\u044f \\u043e\\u0434\\u043d\\u0443 \\u043f\\u0435\\u0440\\u0435\\u043c\\u0435\\u043d\\u043d\\u0443\\u044e, \\u0438\\u0437\\u043c\\u0435\\u043d\\u044f\\u0435\\u0442\\u0441\\u044f \\u0438 \\u0434\\u0440\\u0443\\u0433\\u0430\\u044f, \\u0435\\u0441\\u043b\\u0438 \\u043e\\u0431\\u044a\\u0435\\u043a\\u0442 \\u043e\\u0431\\u0449\\u0438\\u0439\\n    var copyObject = function(from){\\n        var to = {};\\n        for(i in from){\\n            to[i] = from[i];\\n        }\\n        return to;\\n    }    \\n    \\/\\/ \\u0424\\u0438\\u043a\\u0441\\u0438\\u0440\\u0443\\u0435\\u043c \\u0438\\u0437\\u043d\\u0430\\u0447\\u0430\\u043b\\u044c\\u043d\\u044b\\u0439 \\u043d\\u0430\\u0431\\u043e\\u0440 \\u043a\\u043b\\u0430\\u0441\\u0441\\u043e\\u0432\\n    var classes = copyObject(MODx.config.resource_classes);\\n\\n    \\/\\/ \\u041d\\u0430\\u0432\\u0435\\u0448\\u0438\\u0432\\u0430\\u0435\\u043c \\u0444\\u0443\\u043d\\u043a\\u0446\\u0438\\u044e \\u0438\\u0437\\u043c\\u0435\\u043d\\u0435\\u043d\\u0438\\u044f \\u043d\\u0430\\u0431\\u043e\\u0440\\u0430 \\u043a\\u043b\\u0430\\u0441\\u0441\\u043e\\u0432\\n    \\/\\/ \\u043f\\u0440\\u0438 \\u0441\\u043e\\u0437\\u0434\\u0430\\u043d\\u0438\\u0438 \\u043a\\u043e\\u043d\\u0442\\u0435\\u043a\\u0441\\u0442\\u043d\\u043e\\u0433\\u043e \\u043c\\u0435\\u043d\\u044e\\n    tree.on(\'loadCreateMenus\', function(types){\\n        var node = this.getSelectionModel().getSelectedNode()\\n            ,classKey;\\n\\n        if(resourcesRules && node && node.attributes \\n                && (classKey = node.attributes.classKey)\\n                && resourcesRules[classKey]\\n        ){\\n            for(var i in types){\\n                if(!resourcesRules[classKey].in_array(i)){\\n                    delete  types[i];\\n                }\\n            }\\n        }    \\n        return true;\\n    }, tree);\\n    \\n    \\/\\/ \\u041d\\u0430\\u0432\\u0435\\u0448\\u0438\\u0432\\u0430\\u0435\\u043c \\u0444\\u0443\\u043d\\u043a\\u0446\\u0438\\u044e \\u0432\\u043e\\u0441\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043b\\u0435\\u043d\\u0438\\u044f \\u043d\\u0430\\u0431\\u043e\\u0440\\u0430 \\u043a\\u043b\\u0430\\u0441\\u0441\\u043e\\u0432\\n    \\/\\/ \\u042d\\u0442\\u0430 \\u0444\\u0443\\u043d\\u043a\\u0446\\u0438\\u044f \\u0432\\u044b\\u043f\\u043e\\u043b\\u043d\\u0438\\u0442\\u0441\\u044f \\u043f\\u043e\\u0441\\u043b\\u0435 \\u0444\\u043e\\u0440\\u043c\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\\u0438\\u044f \\u043c\\u0435\\u043d\\u044e, \\u0442\\u0430\\u043a \\u043a\\u0430\\u043a \\u043d\\u0430\\u0432\\u0435\\u0448\\u0435\\u043d\\u043e \\u043f\\u043e\\u0437\\u0436\\u0435\\n    \\/\\/ \\u0431\\u0430\\u0437\\u043e\\u0432\\u043e\\u0433\\u043e \\u043c\\u0435\\u0442\\u043e\\u0434\\u0430 \\u0434\\u0435\\u0440\\u0435\\u0432\\u0430 \\u0440\\u0435\\u0441\\u0443\\u0440\\u0441\\u043e\\u0432\\n    tree.on(\'contextmenu\', function(){\\n        MODx.config.resource_classes = copyObject(classes);\\n    });\\n}); \\n<\\/script>\\nJS;\\n        $modx->regClientStartupScript($JS, true);\\n        break;\\n}"}',
+        'guid' => 'acd46a2c372b5ff1577d52c5d7359866',
+        'native_key' => 1,
+        'signature' => '9ad08ca88e3245d6414d26c51c7fa827',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'shopmodx',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"shopmodx-0.2.0-beta\\/modCategory\\/44eaff3c713c26b74793c820bf9205a1\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"shopmodx"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"shopmodx-0.2.0-beta\\/modCategory\\/44eaff3c713c26b74793c820bf9205a1\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"shopmodx"}',
+    ),
+    2 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"shopmodx-0.2.0-beta\\/modCategory\\/44eaff3c713c26b74793c820bf9205a1\\/2\\/","target":"return MODX_MANAGER_PATH . \'components\\/\';","name":"shopmodx"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"shopmodx-0.2.0-beta\\/modCategory\\/44eaff3c713c26b74793c820bf9205a1.resolve.register.resolver","type":"php","name":"resolve.register"}',
+    ),
+    4 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"shopmodx-0.2.0-beta\\/modCategory\\/44eaff3c713c26b74793c820bf9205a1.resolve.tables.resolver","type":"php","name":"resolve.tables"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '0a2f804a53772d3f70bfdbd6ba360db2',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '44eaff3c713c26b74793c820bf9205a1',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"shopModx"}',
+);

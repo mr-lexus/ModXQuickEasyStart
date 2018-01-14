@@ -1,0 +1,158 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '3e2b7e9d5dcbbe2443a878462f4b5511' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '8c6596c3811f3ec117dd463be514f312' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnHandleRequest","priority":-1000,"propertyset":0}',
+              'guid' => '9fe7f3c005dd3a7c80de96e2c61f982a',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnHandleRequest',
+              ),
+              'signature' => 'de0f9b8a784cedf0291fcca1a38cb94b',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":0,"source":0,"property_preprocess":0,"name":"Debug","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"if(\\n    !$modx->hasPermission(\'Debug\')\\n    OR $modx->context->key == \'mgr\'\\n){\\n    return;\\n}\\n\\nerror_reporting(E_ALL ^ E_NOTICE);\\nini_set(\'display_errors\', 1);\\n$modx->setLogTarget(\'HTML\');\\n$modx->setLogLevel(1);","locked":0,"properties":null,"disabled":1,"moduleguid":"","static":0,"static_file":"","content":"if(\\n    !$modx->hasPermission(\'Debug\')\\n    OR $modx->context->key == \'mgr\'\\n){\\n    return;\\n}\\n\\nerror_reporting(E_ALL ^ E_NOTICE);\\nini_set(\'display_errors\', 1);\\n$modx->setLogTarget(\'HTML\');\\n$modx->setLogLevel(1);"}',
+        'guid' => '6100b70f156ba4e816fb0a683d7664ff',
+        'native_key' => 0,
+        'signature' => '429b154555bc5d453b00f091ce5ca3f5',
+      ),
+      'cf833d828c477d731adb22e776d3efef' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'ea05ff86825004fafa97555b41d2c4a0' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnWebPageComplete","priority":0,"propertyset":0}',
+              'guid' => '258337f03ddf8f8d18dc076fea47ee60',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnWebPageComplete',
+              ),
+              'signature' => '5438dd00d0aba86a3fd97208018b2afe',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":0,"source":0,"property_preprocess":0,"name":"memory_get_usage","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"if(!$modx->hasPermission(\'Debug\'))return;\\n\\nprint \'<br \\/><br \\/><hr \\/>\';\\n\\n$memory = round(memory_get_usage()\\/1024\\/1024, 4).\' Mb\';\\n\\nprint \\"<div>Memory: {$memory}<\\/div>\\";\\n\\n$totalTime= (microtime(true) - $modx->startTime);\\n$queryTime= $modx->queryTime;\\n$queryTime= sprintf(\\"%2.4f s\\", $queryTime);\\n$queries= isset ($modx->executedQueries) ? $modx->executedQueries : 0;\\n$totalTime= sprintf(\\"%2.4f s\\", $totalTime);\\n$phpTime= $totalTime - $queryTime;\\n$phpTime= sprintf(\\"%2.4f s\\", $phpTime);\\nprint \\"<div>TotalTime: {$totalTime}<\\/div>\\";\\nexit;","locked":0,"properties":null,"disabled":1,"moduleguid":"","static":0,"static_file":"","content":"if(!$modx->hasPermission(\'Debug\'))return;\\n\\nprint \'<br \\/><br \\/><hr \\/>\';\\n\\n$memory = round(memory_get_usage()\\/1024\\/1024, 4).\' Mb\';\\n\\nprint \\"<div>Memory: {$memory}<\\/div>\\";\\n\\n$totalTime= (microtime(true) - $modx->startTime);\\n$queryTime= $modx->queryTime;\\n$queryTime= sprintf(\\"%2.4f s\\", $queryTime);\\n$queries= isset ($modx->executedQueries) ? $modx->executedQueries : 0;\\n$totalTime= sprintf(\\"%2.4f s\\", $totalTime);\\n$phpTime= $totalTime - $queryTime;\\n$phpTime= sprintf(\\"%2.4f s\\", $phpTime);\\nprint \\"<div>TotalTime: {$totalTime}<\\/div>\\";\\nexit;"}',
+        'guid' => 'f71331fea1624b7f43253f5d87315de0',
+        'native_key' => 0,
+        'signature' => 'c670971dd7f78a6a1e15ea8542cf9d0b',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'modxsite',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"modxsite-1.4.0-beta\\/modCategory\\/88e7468410f1265fb14893a3f7da98bb\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"modxsite"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"modxsite-1.4.0-beta\\/modCategory\\/88e7468410f1265fb14893a3f7da98bb\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"modxsite"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"modxsite-1.4.0-beta\\/modCategory\\/88e7468410f1265fb14893a3f7da98bb.resolve.install.resolver","type":"php","name":"resolve.install"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c86f1c9d75e57ac325a1ae8364029c58',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '88e7468410f1265fb14893a3f7da98bb',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"modxSite"}',
+);

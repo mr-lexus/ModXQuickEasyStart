@@ -1,0 +1,128 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      '17985bf9c89893010496e28e5cfb658c' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"smarty","description":"Include Smarty-template","editor_type":0,"category":0,"cache_type":0,"snippet":"foreach($scriptProperties as $key => $value){\\n    $modx->smarty->assign($key, $value);\\n}\\n\\nreturn $modx->smarty->fetch($tpl);","locked":0,"properties":null,"moduleguid":"","static":0,"static_file":"","content":"foreach($scriptProperties as $key => $value){\\n    $modx->smarty->assign($key, $value);\\n}\\n\\nreturn $modx->smarty->fetch($tpl);"}',
+        'guid' => '0d80fc376eca5cf2f3480ac6fb1d2570',
+        'native_key' => NULL,
+        'signature' => '51b77560b1967038f8c9bd0e3bee5a72',
+      ),
+    ),
+    'Plugins' => 
+    array (
+      '457a3b33620642f16bea04fb53d2d357' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"modxSmarty","description":"\\u041e\\u0441\\u043d\\u043e\\u0432\\u043d\\u043e\\u0439\\u043f\\u043b\\u0430\\u0433\\u0438\\u043d \\u043a\\u043e\\u043c\\u043f\\u043e\\u043d\\u0435\\u043d\\u0442\\u0430 modxSmarty","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/\\/ \\u0418\\u043d\\u0438\\u0446\\u0438\\u0430\\u043b\\u0438\\u0437\\u0438\\u0440\\u0443\\u0435\\u043c \\u0421\\u043c\\u0430\\u0440\\u0442\\u0438\\n  \\n$core_path = $modx->getOption(\'modxSmarty.core_path\', $scriptProperties, $modx->getOption(\'core_path\', null).\'components\\/modxsmarty\\/\');\\n$template_dir = $modx->getOption(\'modxSmarty.template_dir\', $scriptProperties, $core_path.\'templates\\/\');\\n$template = $modx->getOption(\'modxSmarty.template\', $scriptProperties, \'default\');\\n$cache_dir = $modx->getOption(\'modxSmarty.cache_dir\', $scriptProperties, $modx->getOption(\'core_path\', null).\'cache\\/modxsmarty\\/\');\\n\\nif(!$compile_dir = $modx->getOption(\'modxSmarty.compile_dir\', $scriptProperties, null)){\\n    $compile_dir = \\"{$core_path}compiled\\/\\";\\n}\\n\\n$config = array(\\n    \'template_dir\'      => $template_dir.\\"{$template}\\/\\",\\n    \'compile_dir\'       => $compile_dir,\\n    \'cache_dir\'         => $cache_dir,\\n    \'caching\'           => $modx->getOption(\'modxSmarty.caching\', $scriptProperties, false),\\n    \'cache_lifetime\'    => $modx->getOption(\'modxSmarty.cache_lifetime\', $scriptProperties, -1),\\n);\\n\\nswitch($modx->event->name){\\n    case \'OnHandleRequest\':\\n        \\n        if(\\n            $modx->context->key == \'mgr\'\\n            OR (isset($modx->smarty) && is_object($modx->smarty))\\n        ){\\n            return;\\n        }\\n        \\n        $smarty = $modx->getService(\'smarty\', \'modxSmarty\', MODX_CORE_PATH . \'components\\/modxsmarty\\/model\\/modxSmarty\\/\', $config);\\n            \\n        $templates = array();\\n        \\n        $_compile_dir = \\"{$template}\\/\\";\\n        \\n        if($pre_template = $modx->getOption(\'modxSmarty.pre_template\', null, false)){\\n            $templates[\'prepend\'] = $template_dir.\\"{$pre_template}\\/\\";\\n            $modx->smarty->assign(\'pre_template\', $pre_template);\\n            $modx->smarty->assign(\'pre_template_url\', $modx->getOption(\'modxSite.template_url\'). $pre_template .\'\\/\');\\n            $_compile_dir .= \\"{$pre_template}\\/\\";\\n        } \\n        \\n        $_compile_dir .= $modx->context->key. \\"\\/\\";\\n        \\n        $templates[\'main\'] = $template_dir.\\"{$template}\\/\\"; \\n        $smarty->setTemplateDir($templates);\\n        $smarty->setCompileDir($config[\'compile_dir\']. $_compile_dir);\\n        \\n        \\/*\\n            http:\\/\\/www.smarty.net\\/forums\\/viewtopic.php?p=87138&sid=03237308442c46664f9a5a80353eb277#87138\\n            Set $smarty->inheritance_merge_compiled_includes = false;\\n            You must delete the existing compiled and cache files after this modification. The files must be rebuild.\\n        *\\/\\n        $smarty->inheritance_merge_compiled_includes = false;  \\n     \\n        $plugins_dir = array(\\n            $core_path.\'smarty_plugins\',\\n        );\\n        $modx->smarty->addPluginsDir($plugins_dir);\\n        $modx->smarty->assign(\'modx\', $modx);\\n        $modx->smarty->assign(\'template_url\', $modx->getOption(\'modxSite.template_url\'). $template .\'\\/\');\\n         \\n        break;\\n    \\n    case \'OnSiteRefresh\':\\n        $modx->setOption(\'extensions\', array(\'.tpl.php\'));\\n        $modx->cacheManager->deleteTree($config[\'cache_dir\'], array(\\n            \'extensions\' => array(\'.tpl.php\'),\\n        ));\\n        $modx->cacheManager->deleteTree($config[\'compile_dir\'], array(\\n            \'extensions\' => array(\'.tpl.php\'),\\n        ));\\n        \\n        break;\\n    \\n    default:;\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/\\/ \\u0418\\u043d\\u0438\\u0446\\u0438\\u0430\\u043b\\u0438\\u0437\\u0438\\u0440\\u0443\\u0435\\u043c \\u0421\\u043c\\u0430\\u0440\\u0442\\u0438\\n  \\n$core_path = $modx->getOption(\'modxSmarty.core_path\', $scriptProperties, $modx->getOption(\'core_path\', null).\'components\\/modxsmarty\\/\');\\n$template_dir = $modx->getOption(\'modxSmarty.template_dir\', $scriptProperties, $core_path.\'templates\\/\');\\n$template = $modx->getOption(\'modxSmarty.template\', $scriptProperties, \'default\');\\n$cache_dir = $modx->getOption(\'modxSmarty.cache_dir\', $scriptProperties, $modx->getOption(\'core_path\', null).\'cache\\/modxsmarty\\/\');\\n\\nif(!$compile_dir = $modx->getOption(\'modxSmarty.compile_dir\', $scriptProperties, null)){\\n    $compile_dir = \\"{$core_path}compiled\\/\\";\\n}\\n\\n$config = array(\\n    \'template_dir\'      => $template_dir.\\"{$template}\\/\\",\\n    \'compile_dir\'       => $compile_dir,\\n    \'cache_dir\'         => $cache_dir,\\n    \'caching\'           => $modx->getOption(\'modxSmarty.caching\', $scriptProperties, false),\\n    \'cache_lifetime\'    => $modx->getOption(\'modxSmarty.cache_lifetime\', $scriptProperties, -1),\\n);\\n\\nswitch($modx->event->name){\\n    case \'OnHandleRequest\':\\n        \\n        if(\\n            $modx->context->key == \'mgr\'\\n            OR (isset($modx->smarty) && is_object($modx->smarty))\\n        ){\\n            return;\\n        }\\n        \\n        $smarty = $modx->getService(\'smarty\', \'modxSmarty\', MODX_CORE_PATH . \'components\\/modxsmarty\\/model\\/modxSmarty\\/\', $config);\\n            \\n        $templates = array();\\n        \\n        $_compile_dir = \\"{$template}\\/\\";\\n        \\n        if($pre_template = $modx->getOption(\'modxSmarty.pre_template\', null, false)){\\n            $templates[\'prepend\'] = $template_dir.\\"{$pre_template}\\/\\";\\n            $modx->smarty->assign(\'pre_template\', $pre_template);\\n            $modx->smarty->assign(\'pre_template_url\', $modx->getOption(\'modxSite.template_url\'). $pre_template .\'\\/\');\\n            $_compile_dir .= \\"{$pre_template}\\/\\";\\n        } \\n        \\n        $_compile_dir .= $modx->context->key. \\"\\/\\";\\n        \\n        $templates[\'main\'] = $template_dir.\\"{$template}\\/\\"; \\n        $smarty->setTemplateDir($templates);\\n        $smarty->setCompileDir($config[\'compile_dir\']. $_compile_dir);\\n        \\n        \\/*\\n            http:\\/\\/www.smarty.net\\/forums\\/viewtopic.php?p=87138&sid=03237308442c46664f9a5a80353eb277#87138\\n            Set $smarty->inheritance_merge_compiled_includes = false;\\n            You must delete the existing compiled and cache files after this modification. The files must be rebuild.\\n        *\\/\\n        $smarty->inheritance_merge_compiled_includes = false;  \\n     \\n        $plugins_dir = array(\\n            $core_path.\'smarty_plugins\',\\n        );\\n        $modx->smarty->addPluginsDir($plugins_dir);\\n        $modx->smarty->assign(\'modx\', $modx);\\n        $modx->smarty->assign(\'template_url\', $modx->getOption(\'modxSite.template_url\'). $template .\'\\/\');\\n         \\n        break;\\n    \\n    case \'OnSiteRefresh\':\\n        $modx->setOption(\'extensions\', array(\'.tpl.php\'));\\n        $modx->cacheManager->deleteTree($config[\'cache_dir\'], array(\\n            \'extensions\' => array(\'.tpl.php\'),\\n        ));\\n        $modx->cacheManager->deleteTree($config[\'compile_dir\'], array(\\n            \'extensions\' => array(\'.tpl.php\'),\\n        ));\\n        \\n        break;\\n    \\n    default:;\\n}"}',
+        'guid' => '9588e4b1c2c7bae0430063b39cd87a61',
+        'native_key' => NULL,
+        'signature' => '50f267edaf4619db48f986b69d887d43',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'd472cffba3ae67c48b682d521ee5c1d2' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnHandleRequest","priority":0,"propertyset":0}',
+              'guid' => '932a9d8164747a0d476661ee9b5c30aa',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnHandleRequest',
+              ),
+              'signature' => 'b762a4a43f2eb9e68a1f7048e852c92f',
+            ),
+            'a886b183b4b79936e5862cba0b7c8fb6' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnSiteRefresh","priority":0,"propertyset":0}',
+              'guid' => '6c0dc276c8ea972c10302765cb93779e',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnSiteRefresh',
+              ),
+              'signature' => '37f734c8953c55afbb07b3467924ccd7',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'modxsmarty',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"modxsmarty-1.0.3-beta\\/modCategory\\/68e5e792aa5aa3480e4583b6c9d12953\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"modxsmarty"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"modxsmarty-1.0.3-beta\\/modCategory\\/68e5e792aa5aa3480e4583b6c9d12953\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"modxsmarty"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '6aefdb2f743154716a8bfabfe28d9c04',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '68e5e792aa5aa3480e4583b6c9d12953',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"modxSmarty"}',
+);

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'composerconsole',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f2de2673eb6814f9a9e2e7bd27389668',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '042df89807bd9eab4c70360e2fac5317',
+  'native_key' => 'composerconsole.composer_dir',
+  'object' => '{"key":"composerconsole.composer_dir","value":"{core_path}","xtype":"textfield","namespace":"composerconsole","area":"","editedon":null}',
+);

@@ -1,0 +1,14 @@
+Changelog for ComposerConsole.
+
+ComposerConsole 0.1.3-pl
+==============
+- addExtensionPackage
+- add CA certificate file
+
+ComposerConsole 0.1.2-pl
+==============
+- fix BaseManagerController
+
+ComposerConsole 0.1.1
+==============
+- Initial release.

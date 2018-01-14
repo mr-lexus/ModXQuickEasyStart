@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'shopmodx',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '548fd903df44f09f6dbd081b7eab0add',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'e844a76600e7a74f501f95e2c8f98eb5',
+  'native_key' => 'shopmodx.default_currency',
+  'object' => '{"key":"shopmodx.default_currency","value":"","xtype":"shopmodx-combo-currencies","namespace":"shopmodx","area":"shop","editedon":null}',
+);

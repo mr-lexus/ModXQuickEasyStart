@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'composerconsole',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c46fda61153cb2a9e2882d70f7f0b096',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '28268d1e372ff4d6da0005467e109228',
+  'native_key' => 'composerconsole.verbose',
+  'object' => '{"key":"composerconsole.verbose","value":"0","xtype":"textfield","namespace":"composerconsole","area":"","editedon":null}',
+);

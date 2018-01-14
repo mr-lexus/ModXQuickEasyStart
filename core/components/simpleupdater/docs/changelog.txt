@@ -1,0 +1,14 @@
+Changelog for simpleUpdater.
+
+2.1.1-beta
+==============
+- Restored menu item
+
+2.1.0-beta
+==============
+- Show button on top menu
+- Removed menu item
+
+1.0.0-beta
+==============
+- Initial release

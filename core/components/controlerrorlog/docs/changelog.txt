@@ -1,0 +1,54 @@
+Changelog for controlErrorLog.
+
+1.2.0-pl
+==============
+- Added a button "Make a copy" which makes a copy of the error log with current timestamp in the name.
+- Changed the admin notification event from "OnHandleRequest" to "OnWebPageComplete".
+
+1.1.3-pl
+==============
+- Fixed bug which occurs when the error log is bigger then allowed memory size [#14].
+
+1.1.2-pl
+==============
+- Code optimization.
+- Added cron script for checking the error log (core/components/controlerrorlog/cron/checkerrorlog.php).
+
+1.1.1-pl
+==============
+- Updated the Dutch lexicon.
+
+1.1.0-pl
+==============
+- Added control of the error log in the frontend of the site and admin notification.
+
+1.0.5-pl
+==============
+- Fixed bug with lexicon strings with some CMPs (#6)
+
+1.0.4-pl
+==============
+- Fixed the error #5.
+
+1.0.3-pl
+==============
+- Now the error log is checked for errors every minute (by default). It can be switched off.
+- Add a system setting "Last lines".
+- Add a system setting "Refresh frequency".
+- Add a system setting "Auto refresh".
+- Some improvements - now the window closes with animation, refreshing the error log on opening the window.
+
+1.0.2-pl
+==============
+- Removed the table creation script.
+
+1.0.1-pl
+==============
+- Changed the appearance of the error indicator.
+- Now the error indicator is displayed only for users with permission "error_log_view".
+- Removed Error Log button.
+- Added language support for Dutch.
+
+1.0.0-pl
+==============
+- Initial release

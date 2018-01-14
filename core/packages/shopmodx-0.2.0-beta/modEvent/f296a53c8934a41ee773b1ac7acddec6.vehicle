@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'shopmodx',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '6a91452b1fdad97d4df75f0b04ba7f0e',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => 'f296a53c8934a41ee773b1ac7acddec6',
+  'native_key' => 'OnShopModxSetResourcesCreateRules',
+  'object' => '{"name":"OnShopModxSetResourcesCreateRules","service":1,"groupname":"shopModx"}',
+);
