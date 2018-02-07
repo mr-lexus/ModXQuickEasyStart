@@ -1,0 +1,336 @@
+[
+    {
+        "name": "symfony/polyfill-mbstring",
+        "version": "v1.5.0",
+        "version_normalized": "1.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-mbstring.git",
+            "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
+            "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "suggest": {
+            "ext-mbstring": "For best performance"
+        },
+        "time": "2017-06-14 15:44:48",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.5-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\Mbstring\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfill for the Mbstring extension",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compatibility",
+            "mbstring",
+            "polyfill",
+            "portable",
+            "shim"
+        ]
+    },
+    {
+        "name": "fzaninotto/faker",
+        "version": "v1.7.1",
+        "version_normalized": "1.7.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/fzaninotto/Faker.git",
+            "reference": "d3ed4cc37051c1ca52d22d76b437d14809fc7e0d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/d3ed4cc37051c1ca52d22d76b437d14809fc7e0d",
+            "reference": "d3ed4cc37051c1ca52d22d76b437d14809fc7e0d",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.3.3 || ^7.0"
+        },
+        "require-dev": {
+            "ext-intl": "*",
+            "phpunit/phpunit": "^4.0 || ^5.0",
+            "squizlabs/php_codesniffer": "^1.5"
+        },
+        "time": "2017-08-15 16:48:10",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.8-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Faker\\": "src/Faker/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "François Zaninotto"
+            }
+        ],
+        "description": "Faker is a PHP library that generates fake data for you.",
+        "keywords": [
+            "data",
+            "faker",
+            "fixtures"
+        ]
+    },
+    {
+        "name": "paragonie/random_compat",
+        "version": "v2.0.11",
+        "version_normalized": "2.0.11.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/paragonie/random_compat.git",
+            "reference": "5da4d3c796c275c55f057af5a643ae297d96b4d8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/paragonie/random_compat/zipball/5da4d3c796c275c55f057af5a643ae297d96b4d8",
+            "reference": "5da4d3c796c275c55f057af5a643ae297d96b4d8",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.*|5.*"
+        },
+        "suggest": {
+            "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
+        },
+        "time": "2017-09-27 21:40:39",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "lib/random.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Paragon Initiative Enterprises",
+                "email": "security@paragonie.com",
+                "homepage": "https://paragonie.com"
+            }
+        ],
+        "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+        "keywords": [
+            "csprng",
+            "pseudorandom",
+            "random"
+        ]
+    },
+    {
+        "name": "mobiledetect/mobiledetectlib",
+        "version": "2.8.28",
+        "version_normalized": "2.8.28.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/serbanghita/Mobile-Detect.git",
+            "reference": "65cd802dad5e85cb8f0ab1ba54ae5fdca765062b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/serbanghita/Mobile-Detect/zipball/65cd802dad5e85cb8f0ab1ba54ae5fdca765062b",
+            "reference": "65cd802dad5e85cb8f0ab1ba54ae5fdca765062b",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.0.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.8|5.7"
+        },
+        "time": "2017-12-09 09:59:47",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "Mobile_Detect.php"
+            ],
+            "psr-0": {
+                "Detection": "namespaced/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Serban Ghita",
+                "email": "serbanghita@gmail.com",
+                "homepage": "http://mobiledetect.net",
+                "role": "Developer"
+            }
+        ],
+        "description": "Mobile_Detect is a lightweight PHP class for detecting mobile devices. It uses the User-Agent string combined with specific HTTP headers to detect the mobile environment.",
+        "homepage": "https://github.com/serbanghita/Mobile-Detect",
+        "keywords": [
+            "detect mobile devices",
+            "mobile",
+            "mobile detect",
+            "mobile detector",
+            "php mobile detect"
+        ]
+    },
+    {
+        "name": "symfony/polyfill-php70",
+        "version": "v1.6.0",
+        "version_normalized": "1.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-php70.git",
+            "reference": "0442b9c0596610bd24ae7b5f0a6cdbbc16d9fcff"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/0442b9c0596610bd24ae7b5f0a6cdbbc16d9fcff",
+            "reference": "0442b9c0596610bd24ae7b5f0a6cdbbc16d9fcff",
+            "shasum": ""
+        },
+        "require": {
+            "paragonie/random_compat": "~1.0|~2.0",
+            "php": ">=5.3.3"
+        },
+        "time": "2017-10-11 12:05:26",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.6-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\Php70\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ],
+            "classmap": [
+                "Resources/stubs"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfill backporting some PHP 7.0+ features to lower PHP versions",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compatibility",
+            "polyfill",
+            "portable",
+            "shim"
+        ]
+    },
+    {
+        "name": "symfony/http-foundation",
+        "version": "v3.4.2",
+        "version_normalized": "3.4.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/http-foundation.git",
+            "reference": "59bf131b5460227a2f583a7dbe6b179f98f9e0a5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/59bf131b5460227a2f583a7dbe6b179f98f9e0a5",
+            "reference": "59bf131b5460227a2f583a7dbe6b179f98f9e0a5",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.5.9|>=7.0.8",
+            "symfony/polyfill-mbstring": "~1.1",
+            "symfony/polyfill-php70": "~1.6"
+        },
+        "require-dev": {
+            "symfony/expression-language": "~2.8|~3.0|~4.0"
+        },
+        "time": "2017-12-14 19:40:10",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.4-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\HttpFoundation\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony HttpFoundation Component",
+        "homepage": "https://symfony.com"
+    }
+]

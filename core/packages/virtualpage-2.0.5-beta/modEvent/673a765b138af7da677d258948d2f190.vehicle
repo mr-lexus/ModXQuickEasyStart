@@ -1,0 +1,15 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'virtualpage',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '00c8366be1641e393beac641804274b5',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '673a765b138af7da677d258948d2f190',
+  'native_key' => 'vpOnGetResource',
+  'object' => '{"name":"vpOnGetResource","service":6,"groupname":"virtualpage"}',
+);

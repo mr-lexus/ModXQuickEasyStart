@@ -1,0 +1,15 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'virtualpage',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '3221ab057423c7e2ea16427f0fd5a437',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '283cfde0e4cbb599194a8b5f78e9c504',
+  'native_key' => 'vpOnResourceAfterCreate',
+  'object' => '{"name":"vpOnResourceAfterCreate","service":6,"groupname":"virtualpage"}',
+);

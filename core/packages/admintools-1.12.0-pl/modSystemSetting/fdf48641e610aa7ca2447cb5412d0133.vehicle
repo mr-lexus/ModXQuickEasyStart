@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'admintools',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '282c12cccd615b2e0a2bf9aeda475ead',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'fdf48641e610aa7ca2447cb5412d0133',
+  'native_key' => 'admintools_theme',
+  'object' => '{"key":"admintools_theme","value":"default","xtype":"textfield","namespace":"admintools","area":"admintools_main","editedon":null}',
+);

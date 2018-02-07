@@ -298,6 +298,26 @@
       ),
       4 => 
       array (
+        'text' => 'VirtualPage',
+        'parent' => 'components',
+        'action' => '9',
+        'description' => 'Управление виртуальными страницами.',
+        'icon' => 'images/icons/plugin.gif',
+        'menuindex' => 0,
+        'params' => '',
+        'handler' => '',
+        'permissions' => '',
+        'namespace' => 'core',
+        'action_controller' => 'index',
+        'action_namespace' => 'virtualpage',
+        'id' => 'virtualpage',
+        'children' => 
+        array (
+        ),
+        'controller' => '',
+      ),
+      5 => 
+      array (
         'text' => 'Конфигурация',
         'parent' => 'components',
         'action' => '1',
@@ -316,7 +336,7 @@
         ),
         'controller' => '',
       ),
-      5 => 
+      6 => 
       array (
         'text' => 'Обновление MODX',
         'parent' => 'components',
@@ -336,7 +356,27 @@
         ),
         'controller' => '',
       ),
-      6 => 
+      7 => 
+      array (
+        'text' => 'autoRedirector',
+        'parent' => 'components',
+        'action' => '8',
+        'description' => 'Управление автоматически созданными правилами для редиректа.',
+        'icon' => 'images/icons/plugin.gif',
+        'menuindex' => 0,
+        'params' => '',
+        'handler' => '',
+        'permissions' => '',
+        'namespace' => 'core',
+        'action_controller' => 'index',
+        'action_namespace' => 'autoredirector',
+        'id' => 'autoredirector',
+        'children' => 
+        array (
+        ),
+        'controller' => '',
+      ),
+      8 => 
       array (
         'text' => 'Composer Console',
         'parent' => 'components',
@@ -356,7 +396,7 @@
         ),
         'controller' => '',
       ),
-      7 => 
+      9 => 
       array (
         'text' => 'Виды Коллекции',
         'parent' => 'components',

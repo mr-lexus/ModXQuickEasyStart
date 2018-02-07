@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'ajaxmanager',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'aef37038bdac96692ee4a2de3da067a7',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '1d1769fe58e336ecbad8d868ff58917f',
+  'native_key' => 'ajaxmanager.compatible_namespaces',
+  'object' => '{"key":"ajaxmanager.compatible_namespaces","value":"core,clientconfig,minishop2,resourcehider,gallery","xtype":"textfield","namespace":"ajaxmanager","area":"general","editedon":null}',
+);

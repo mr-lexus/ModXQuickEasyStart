@@ -23,27 +23,27 @@ $https_port = '443';
 $uuid = '9d357176-8b62-42eb-b531-0008810800e1';
 
 if (!defined('MODX_CORE_PATH')) {
-    $modx_core_path= '/home/lexus/server/modx-revo-assembly.tool/core/';
+    $modx_core_path= $_SERVER["DOCUMENT_ROOT"].'/core/';
     define('MODX_CORE_PATH', $modx_core_path);
 }
 if (!defined('MODX_PROCESSORS_PATH')) {
-    $modx_processors_path= '/home/lexus/server/modx-revo-assembly.tool/core/model/modx/processors/';
+    $modx_processors_path= $_SERVER["DOCUMENT_ROOT"].'/core/model/modx/processors/';
     define('MODX_PROCESSORS_PATH', $modx_processors_path);
 }
 if (!defined('MODX_CONNECTORS_PATH')) {
-    $modx_connectors_path= '/home/lexus/server/modx-revo-assembly.tool/connectors/';
+    $modx_connectors_path= $_SERVER["DOCUMENT_ROOT"].'/connectors/';
     $modx_connectors_url= '/connectors/';
     define('MODX_CONNECTORS_PATH', $modx_connectors_path);
     define('MODX_CONNECTORS_URL', $modx_connectors_url);
 }
 if (!defined('MODX_MANAGER_PATH')) {
-    $modx_manager_path= '/home/lexus/server/modx-revo-assembly.tool/manager/';
+    $modx_manager_path= $_SERVER["DOCUMENT_ROOT"].'/manager/';
     $modx_manager_url= '/manager/';
     define('MODX_MANAGER_PATH', $modx_manager_path);
     define('MODX_MANAGER_URL', $modx_manager_url);
 }
 if (!defined('MODX_BASE_PATH')) {
-    $modx_base_path= '/home/lexus/server/modx-revo-assembly.tool/';
+    $modx_base_path= $_SERVER["DOCUMENT_ROOT"].'/';
     $modx_base_url= '/';
     define('MODX_BASE_PATH', $modx_base_path);
     define('MODX_BASE_URL', $modx_base_url);
@@ -59,10 +59,10 @@ if (!defined('MODX_URL_SCHEME')) {
 }
 if (!defined('MODX_HTTP_HOST')) {
     if(defined('PHP_SAPI') && (PHP_SAPI == "cli" || PHP_SAPI == "embed")) {
-        $http_host='modx-revo-assembly.tool';
+        $http_host = $_SERVER['HTTP_HOST'];
         define('MODX_HTTP_HOST', $http_host);
     } else {
-        $http_host= array_key_exists('HTTP_HOST', $_SERVER) ? htmlspecialchars($_SERVER['HTTP_HOST'], ENT_QUOTES) : 'modx-revo-assembly.tool';
+        $http_host= array_key_exists('HTTP_HOST', $_SERVER) ? htmlspecialchars($_SERVER['HTTP_HOST'], ENT_QUOTES) : $_SERVER['HTTP_HOST'];
         if ($_SERVER['SERVER_PORT'] != 80) {
             $http_host= str_replace(':' . $_SERVER['SERVER_PORT'], '', $http_host); // remove port from HTTP_HOST
         }
@@ -75,7 +75,7 @@ if (!defined('MODX_SITE_URL')) {
     define('MODX_SITE_URL', $site_url);
 }
 if (!defined('MODX_ASSETS_PATH')) {
-    $modx_assets_path= '/home/lexus/server/modx-revo-assembly.tool/assets/';
+    $modx_assets_path= $_SERVER["DOCUMENT_ROOT"].'/assets/';
     $modx_assets_url= '/assets/';
     define('MODX_ASSETS_PATH', $modx_assets_path);
     define('MODX_ASSETS_URL', $modx_assets_url);

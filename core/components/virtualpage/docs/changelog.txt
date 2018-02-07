@@ -1,0 +1,77 @@
+Changelog for virtualpage.
+
+2.0.5-beta (08.03.2017)
+==============
+- Fix "newResource"
+
+2.0.4-beta (07.11.2016)
+==============
+- Add "cache_prefix" to "cacheKey"
+
+2.0.3-beta (10.09.2016)
+==============
+- Fix "entry getlist"
+
+2.0.2-beta (04.08.2016)
+==============
+- Fix "data"
+- Fix "lexicon"
+
+2.0.1-beta (01.08.2016)
+==============
+- Improvement "dispatch"
+
+2.0.0-beta (01.08.2016)
+==============
+- Full refactoring
+
+1.1.0-beta
+==============
+- update FastRoute
+
+1.0.9-beta
+==============
+- added new event: "vpOnResourceAfterCreate"
+- refactoring cache method
+
+1.0.8-beta
+==============
+- add check site status
+- refactoring js (grid, window, handler)
+
+1.0.7-beta
+==============
+- update FastRoute
+
+1.0.6-beta
+==============
+- add cache for "chunk, snippet"
+- refactoring cache method
+
+1.0.5-beta
+==============
+- add cache for "dinamic resource"
+- small fix
+
+1.0.4-beta
+==============
+- add option placeholder in route
+- add "dinamic resource" in method handler
+
+1.0.3-beta
+==============
+- small fix
+
+1.0.2-beta
+==============
+- add method "GET,POST"
+- add prefix pl
+
+1.0.1-beta
+==============
+- add handler type "chunk"
+- small fix
+
+1.0.0-beta
+==============
+- Initial release.

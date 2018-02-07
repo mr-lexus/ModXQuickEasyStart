@@ -1,0 +1,155 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '11db290bdc64a7c5d3c8bc4b92e8cff0' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"vpSystem","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/** @var array $scriptProperties *\\/\\r\\n$fqn = $modx->getOption(\'virtualpage_class\', null, \'virtualpage.virtualpage\', true);\\r\\n$path = $modx->getOption(\'virtualpage_class_path\', null,\\r\\n    $modx->getOption(\'core_path\', null, MODX_CORE_PATH) . \'components\\/virtualpage\\/\');\\r\\n\\/** @var virtualpage $virtualpage *\\/\\r\\nif (!$virtualpage = $modx->getService($fqn, \'\', $path . \'model\\/\', array(\'core_path\' => $path))) {\\r\\n    return false;\\r\\n}\\r\\n\\r\\n$className = \'virtualpage\' . $modx->event->name;\\r\\n$modx->loadClass(\'virtualpagePlugin\', $path . \'model\\/virtualpage\\/systems\\/\', true, true);\\r\\n$modx->loadClass($className, $path . \'model\\/virtualpage\\/systems\\/\', true, true);\\r\\nif (class_exists($className)) {\\r\\n    \\/** @var $virtualpage $plugin *\\/\\r\\n    $plugin = new $className($modx, $scriptProperties);\\r\\n    $plugin->run();\\r\\n}\\r\\nreturn;","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/virtualpage\\/elements\\/plugins\\/plugin.system.php","content":"\\/** @var array $scriptProperties *\\/\\r\\n$fqn = $modx->getOption(\'virtualpage_class\', null, \'virtualpage.virtualpage\', true);\\r\\n$path = $modx->getOption(\'virtualpage_class_path\', null,\\r\\n    $modx->getOption(\'core_path\', null, MODX_CORE_PATH) . \'components\\/virtualpage\\/\');\\r\\n\\/** @var virtualpage $virtualpage *\\/\\r\\nif (!$virtualpage = $modx->getService($fqn, \'\', $path . \'model\\/\', array(\'core_path\' => $path))) {\\r\\n    return false;\\r\\n}\\r\\n\\r\\n$className = \'virtualpage\' . $modx->event->name;\\r\\n$modx->loadClass(\'virtualpagePlugin\', $path . \'model\\/virtualpage\\/systems\\/\', true, true);\\r\\n$modx->loadClass($className, $path . \'model\\/virtualpage\\/systems\\/\', true, true);\\r\\nif (class_exists($className)) {\\r\\n    \\/** @var $virtualpage $plugin *\\/\\r\\n    $plugin = new $className($modx, $scriptProperties);\\r\\n    $plugin->run();\\r\\n}\\r\\nreturn;"}',
+        'guid' => 'b54843417e7de9ae0c8e14378ffa7208',
+        'native_key' => NULL,
+        'signature' => '002480ca03716cdc08598be872b39f69',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '5a3b9d20069637638317ded48d603af6' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnBeforeCacheUpdate","priority":50,"propertyset":0}',
+              'guid' => 'a575946c9a01f51e636c93b75293ea5b',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnBeforeCacheUpdate',
+              ),
+              'signature' => 'fc4f8f54ddb2265ce8cbb86c98a33adb',
+            ),
+            '9bc40277615c9bab2e839ae840b154a8' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnHandleRequest","priority":50,"propertyset":0}',
+              'guid' => '3db8a484a12cf9f4cb2814400ee36493',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnHandleRequest',
+              ),
+              'signature' => 'c4ffc1fb566aefc52cb66e5421f550c0',
+            ),
+            '6ac671294455a487cee2f11c16c3e9f7' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnPageNotFound","priority":50,"propertyset":0}',
+              'guid' => 'e686892c83d9ee4ac3a3578dc7514735',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnPageNotFound',
+              ),
+              'signature' => '471a0d7e2ef5c9698649376404be6800',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'abort_install_on_vehicle_fail' => true,
+  'related_object_attributes' => 
+  array (
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'virtualpage',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"virtualpage-2.0.5-beta\\/modCategory\\/cd9525cfc8e9a5d8680b47fc57bc0916\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"virtualpage"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"virtualpage-2.0.5-beta\\/modCategory\\/cd9525cfc8e9a5d8680b47fc57bc0916\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"virtualpage"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"virtualpage-2.0.5-beta\\/modCategory\\/cd9525cfc8e9a5d8680b47fc57bc0916.resolve.tables.resolver","type":"php","name":"resolve.tables"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"virtualpage-2.0.5-beta\\/modCategory\\/cd9525cfc8e9a5d8680b47fc57bc0916.resolve.plugins.resolver","type":"php","name":"resolve.plugins"}',
+    ),
+    4 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"virtualpage-2.0.5-beta\\/modCategory\\/cd9525cfc8e9a5d8680b47fc57bc0916.resolve.event.resolver","type":"php","name":"resolve.event"}',
+    ),
+  ),
+  'validate' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"virtualpage-2.0.5-beta\\/modCategory\\/cd9525cfc8e9a5d8680b47fc57bc0916.validate.phpversion.validator","type":"php","name":"validate.phpversion"}',
+    ),
+    1 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"virtualpage-2.0.5-beta\\/modCategory\\/cd9525cfc8e9a5d8680b47fc57bc0916.validate.vendors.validator","type":"php","name":"validate.vendors"}',
+    ),
+  ),
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd511296980485d93cf40d6d5515ce3a5',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'cd9525cfc8e9a5d8680b47fc57bc0916',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"virtualpage","rank":0}',
+);

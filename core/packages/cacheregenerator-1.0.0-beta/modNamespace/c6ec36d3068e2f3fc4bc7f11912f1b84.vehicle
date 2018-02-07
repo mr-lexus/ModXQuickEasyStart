@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'cacheregenerator',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '8b572cd45ee8961d0d89221eb1e5c9ed',
+  'package' => 'modx',
+  'class' => 'modNamespace',
+  'signature' => 'c6ec36d3068e2f3fc4bc7f11912f1b84',
+  'native_key' => 'cacheregenerator',
+  'object' => '{"name":"cacheregenerator","path":"{core_path}components\\/cacheregenerator\\/","assets_path":"{assets_path}components\\/cacheregenerator\\/"}',
+);

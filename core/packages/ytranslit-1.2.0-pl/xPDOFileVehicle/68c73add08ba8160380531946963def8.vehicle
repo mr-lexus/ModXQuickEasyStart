@@ -1,0 +1,25 @@
+<?php return array (
+  'class' => 'xPDOFileVehicle',
+  'object' => 
+  array (
+    'source' => 'ytranslit-1.2.0-pl/xPDOFileVehicle/68c73add08ba8160380531946963def8/',
+    'target' => 'return MODX_CORE_PATH . \'components/\';',
+    'name' => 'ytranslit',
+  ),
+  'vehicle_class' => 'xPDOFileVehicle',
+  'namespace' => 'ytranslit',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"ytranslit-1.2.0-pl\\/xPDOFileVehicle\\/68c73add08ba8160380531946963def8.resolve.settings.resolver","type":"php","name":"resolve.settings"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'guid' => 'e11b266368bee419f32bce864721add9',
+  'package' => '',
+  'signature' => '68c73add08ba8160380531946963def8',
+  'native_key' => 'e11b266368bee419f32bce864721add9',
+);

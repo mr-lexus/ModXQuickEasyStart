@@ -1,0 +1,15 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'virtualpage',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '1518b7ef3ac4254d1a06770df844348c',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '237f14df3325117538166d5bd456c73a',
+  'native_key' => 'vpOnBeforeProcess',
+  'object' => '{"name":"vpOnBeforeProcess","service":6,"groupname":"virtualpage"}',
+);

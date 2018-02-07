@@ -1,0 +1,116 @@
+1.12.0-pl
+==============
+- Added package action management which allows to prevent from installing, uninstalling, updating and removing packages.
+
+1.11.2-pl
+==============
+- Some code optimization (special thanks to Fi1osof).
+
+1.11.1-pl
+==============
+- Fixed error in the names of the two last added system settings.
+- Changed order of including css files.
+
+1.11.0-pl
+==============
+- Added 2 system settings - "admintools_custom_css" and "admintools_custom_js" which allow to add to the manager interface custom style and javascript files.
+- Tuned the purple theme.
+
+1.10.1-beta
+==============
+- Added the 'purple' color theme.
+- Bugfixes.
+
+1.10.0-beta
+==============
+- Added color themes.
+- The resource tree can be moved to the right side.
+
+1.9.0-pl
+==============
+- Added plugin interface with bound events.
+
+1.8.2-pl
+==============
+- Added a checkbox "Create cache" to the resource form which allows to save the resource to the cache when you save it.
+- Admin notes can be imported and exported.
+
+1.8.1-beta
+==============
+- Fixed issue #8 with mbstring.
+
+1.8.0-beta
+==============
+- Added alternative permissions for resources.
+- Template link in the resource form is made as icon.
+- The "description" and "introtext" fields now are resizable.
+
+1.7.0-pl
+==============
+- Added animation for the main menu.
+- Added system setting to disable templates and resources relationship.
+
+1.6.0-pl
+==============
+- Added templates and resources relationship.
+
+1.5.0-pl
+==============
+- Added user notes functionality.
+
+1.4.1-pl
+==============
+- Made the alternate login interface in pure javascript. Remove the jQuery from the AdminLogin snippet.
+- Automatic logout inactive or blocked user if he is logged in.
+
+1.4.1-beta
+==============
+- Element names in the elements log are links now.
+- Fixed bug of the email authorization.
+
+1.4.0-beta
+==============
+- Backend users can authorize via email.
+- Some code optimization.
+
+1.3.0-pl
+==============
+- Added system setting for switching on/off the favorite elements function.
+- Added ability to clear only the saved resource cache (system setting "clear_only resource_cache").
+- Added system setting for hiding component description at menu "Extras".
+- The list of the edited elements is getting from the system 'manager_log' table.
+- Added filter to the last edited elements grid.
+- The user settings of the favorite elements and the system settings save to the extended field of the user (special thanks to Lukas Zahnd).
+- Fixed some bugs (special thanks to Lukas Zahnd).
+
+1.2.1-pl
+==============
+- Fixed bug with favorites elements.
+
+1.2.0-pl
+==============
+- Added a log of recently edited elements to the tree toolbar.
+- Switch off check the elements permission for users with sudo while the tree is building.
+- Fixed some bugs.
+
+1.1.1-pl
+==============
+- Fixed session array for admintools.
+
+1.1.0-pl
+==============
+- Remember system settings state.
+- Added system setting allowing to switch off check the elements permission while the tree is building.
+- Show favorite elements without category folders.
+
+1.0.2-pl
+==============
+- Personal setting for each user.
+
+1.0.1-pl
+==============
+- Changed the cache path.
+
+1.0.0-pl
+==============
+- Initial release.

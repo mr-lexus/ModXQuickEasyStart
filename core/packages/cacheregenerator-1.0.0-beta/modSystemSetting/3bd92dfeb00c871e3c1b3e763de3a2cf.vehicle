@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'cacheregenerator',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '09a2e5e34c7215bbcdaadc0e558b4e82',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '3bd92dfeb00c871e3c1b3e763de3a2cf',
+  'native_key' => 'cacheregenerator.exclude_docs_id',
+  'object' => '{"key":"cacheregenerator.exclude_docs_id","value":"","xtype":"textfield","namespace":"cacheregenerator","area":"default","editedon":null}',
+);

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'websocketphp',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '78e2494f63e9d8e3fcee0ea0eda3a884',
+  'package' => 'modx',
+  'class' => 'modNamespace',
+  'signature' => '5ce4a6f8c8fd4c035df56dc7e26123de',
+  'native_key' => 'websocketphp',
+  'object' => '{"name":"websocketphp","path":"{core_path}components\\/websocketphp\\/","assets_path":"{assets_path}components\\/websocketphp\\/"}',
+);

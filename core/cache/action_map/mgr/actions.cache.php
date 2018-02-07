@@ -1,4 +1,17 @@
 <?php  return array (
+  8 => 
+  array (
+    'id' => '8',
+    'namespace' => 'autoredirector',
+    'controller' => 'index',
+    'haslayout' => '1',
+    'lang_topics' => 'autoredirector:default',
+    'assets' => '',
+    'help_url' => '',
+    'namespace_name' => 'autoredirector',
+    'namespace_path' => '/home/lexus/server/modx-revo-assembly.tool/core/components/autoredirector/',
+    'namespace_assets_path' => '',
+  ),
   1 => 
   array (
     'id' => '1',
@@ -88,6 +101,19 @@
     'help_url' => '',
     'namespace_name' => 'versionx',
     'namespace_path' => '/home/lexus/server/modx-revo-assembly.tool/core/components/versionx/',
+    'namespace_assets_path' => '',
+  ),
+  9 => 
+  array (
+    'id' => '9',
+    'namespace' => 'virtualpage',
+    'controller' => 'index',
+    'haslayout' => '1',
+    'lang_topics' => 'virtualpage:default',
+    'assets' => '',
+    'help_url' => '',
+    'namespace_name' => 'virtualpage',
+    'namespace_path' => '/home/lexus/server/modx-revo-assembly.tool/core/components/virtualpage/',
     'namespace_assets_path' => '',
   ),
 );

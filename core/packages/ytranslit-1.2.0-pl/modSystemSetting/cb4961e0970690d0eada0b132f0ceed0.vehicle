@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'ytranslit',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a047ba0c306b2cba8fdfeef8c02246e8',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'cb4961e0970690d0eada0b132f0ceed0',
+  'native_key' => 'friendly_alias_ytranslit_url',
+  'object' => '{"key":"friendly_alias_ytranslit_url","value":"https:\\/\\/translate.yandex.net\\/api\\/v1.5\\/tr.json\\/translate?key=[[+key]]&lang=ru-en&text=","xtype":"textfield","namespace":"ytranslit","area":"","editedon":null}',
+);

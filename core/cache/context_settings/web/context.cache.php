@@ -4,13 +4,37 @@
   ),
   'aliasMap' => 
   array (
-    'index.html' => 1,
+    'main' => 1,
+    'news' => 5,
+    'systempage' => 2,
+    'systempage/404' => 3,
+    'systempage/403' => 4,
+    'news/news-1' => 6,
+    'news/item2' => 7,
+    'news/item3' => 8,
+    'news/item4' => 10,
+    'news/item5' => 9,
   ),
   'resourceMap' => 
   array (
     0 => 
     array (
       0 => 1,
+      1 => 5,
+      2 => 2,
+    ),
+    2 => 
+    array (
+      0 => 3,
+      1 => 4,
+    ),
+    5 => 
+    array (
+      0 => 6,
+      1 => 7,
+      2 => 8,
+      3 => 10,
+      4 => 9,
     ),
   ),
   'webLinkMap' => 
@@ -18,34 +42,70 @@
   ),
   'eventMap' => 
   array (
+    'ClientConfig_ConfigChange' => 
+    array (
+      26 => '26',
+    ),
+    'OnBeforeCacheUpdate' => 
+    array (
+      25 => '25',
+    ),
     'OnBeforeDocFormSave' => 
     array (
+      24 => '24',
       11 => '11',
     ),
     'OnBeforeEmptyTrash' => 
     array (
       11 => '11',
     ),
+    'OnCategoryRemove' => 
+    array (
+      26 => '26',
+    ),
+    'OnCategorySave' => 
+    array (
+      26 => '26',
+    ),
+    'OnChunkFormDelete' => 
+    array (
+      26 => '26',
+    ),
     'OnChunkFormPrerender' => 
     array (
-      1 => '1',
       13 => '13',
       8 => '8',
+      1 => '1',
     ),
     'OnChunkFormSave' => 
     array (
+      26 => '26',
       13 => '13',
     ),
     'OnChunkRemove' => 
     array (
+      26 => '26',
       8 => '8',
+    ),
+    'OnChunkSave' => 
+    array (
+      26 => '26',
+    ),
+    'OnContextRemove' => 
+    array (
+      26 => '26',
+    ),
+    'OnContextSave' => 
+    array (
+      26 => '26',
     ),
     'OnDocFormPrerender' => 
     array (
-      13 => '13',
       1 => '1',
       11 => '11',
       14 => '14',
+      30 => '30',
+      13 => '13',
     ),
     'OnDocFormRender' => 
     array (
@@ -53,7 +113,22 @@
     ),
     'OnDocFormSave' => 
     array (
+      30 => '30',
       13 => '13',
+      24 => '24',
+      26 => '26',
+    ),
+    'OnDocPublished' => 
+    array (
+      26 => '26',
+    ),
+    'OnDocUnPublished' => 
+    array (
+      26 => '26',
+    ),
+    'OnEmptyTrash' => 
+    array (
+      26 => '26',
     ),
     'OnFileCreateFormPrerender' => 
     array (
@@ -66,26 +141,44 @@
     'OnFileManagerUpload' => 
     array (
       16 => '16',
+      29 => '29',
     ),
     'OnHandleRequest' => 
     array (
       4 => '4',
+      25 => '25',
     ),
     'OnLoadWebDocument' => 
     array (
+      28 => '28',
+      30 => '30',
       5 => '5',
+    ),
+    'OnMediaSourceFormDelete' => 
+    array (
+      26 => '26',
+    ),
+    'OnMediaSourceFormSave' => 
+    array (
+      26 => '26',
     ),
     'OnMODXInit' => 
     array (
+      27 => '27',
       6 => '6',
       7 => '7',
       17 => '17',
     ),
+    'OnPageNotFound' => 
+    array (
+      24 => '24',
+      25 => '25',
+    ),
     'OnPluginFormPrerender' => 
     array (
-      1 => '1',
       8 => '8',
       13 => '13',
+      1 => '1',
     ),
     'OnPluginFormSave' => 
     array (
@@ -93,11 +186,42 @@
     ),
     'OnPluginRemove' => 
     array (
+      26 => '26',
       8 => '8',
+    ),
+    'OnPluginSave' => 
+    array (
+      26 => '26',
     ),
     'OnResourceBeforeSort' => 
     array (
+      24 => '24',
       11 => '11',
+    ),
+    'OnResourceCacheUpdate' => 
+    array (
+      26 => '26',
+    ),
+    'OnResourceDelete' => 
+    array (
+      26 => '26',
+    ),
+    'OnResourceDuplicate' => 
+    array (
+      26 => '26',
+    ),
+    'OnResourceRemoveFromResourceGroup' => 
+    array (
+      26 => '26',
+    ),
+    'OnResourceSort' => 
+    array (
+      24 => '24',
+      26 => '26',
+    ),
+    'OnResourceUndelete' => 
+    array (
+      26 => '26',
     ),
     'OnRichTextBrowserInit' => 
     array (
@@ -114,37 +238,70 @@
     ),
     'OnSiteRefresh' => 
     array (
-      6 => '6',
       4 => '4',
       12 => '12',
+      6 => '6',
+    ),
+    'OnSnipFormDelete' => 
+    array (
+      26 => '26',
     ),
     'OnSnipFormPrerender' => 
     array (
-      13 => '13',
       1 => '1',
       8 => '8',
+      13 => '13',
     ),
     'OnSnipFormSave' => 
     array (
       13 => '13',
+      26 => '26',
     ),
     'OnSnippetRemove' => 
     array (
+      26 => '26',
       8 => '8',
+    ),
+    'OnSnippetSave' => 
+    array (
+      26 => '26',
+    ),
+    'OnTempFormDelete' => 
+    array (
+      26 => '26',
     ),
     'OnTempFormPrerender' => 
     array (
       8 => '8',
       13 => '13',
+      30 => '30',
       1 => '1',
     ),
     'OnTempFormSave' => 
     array (
+      26 => '26',
       13 => '13',
     ),
     'OnTemplateRemove' => 
     array (
       8 => '8',
+      26 => '26',
+    ),
+    'OnTemplateSave' => 
+    array (
+      26 => '26',
+    ),
+    'OnTemplateVarRemove' => 
+    array (
+      26 => '26',
+    ),
+    'OnTemplateVarSave' => 
+    array (
+      26 => '26',
+    ),
+    'OnTVFormDelete' => 
+    array (
+      26 => '26',
     ),
     'OnTVFormPrerender' => 
     array (
@@ -153,6 +310,7 @@
     'OnTVFormSave' => 
     array (
       13 => '13',
+      26 => '26',
     ),
     'OnTVInputPropertiesList' => 
     array (
@@ -1134,6 +1292,438 @@ return;',
       'moduleguid' => '',
       'static' => '0',
       'static_file' => '',
+    ),
+    24 => 
+    array (
+      'id' => '24',
+      'source' => '1',
+      'property_preprocess' => '0',
+      'name' => 'autoRedirector',
+      'description' => '',
+      'editor_type' => '0',
+      'category' => '33',
+      'cache_type' => '0',
+      'plugincode' => '$resourceEvents = array(\'OnBeforeDocFormSave\', \'OnDocFormSave\');
+if (in_array($modx->event->name, $resourceEvents)) {
+    foreach($scriptProperties as & $object){
+        if(
+            is_object($object)
+            AND $object instanceof modResource
+            AND $original = $modx->getObject(\'modResource\', $object->id)
+        ){
+            $resource = $object;
+            break;
+        }
+    }
+}
+switch ($modx->event->name) {
+    case "OnManagerPageInit":
+	$cssFile = MODX_ASSETS_URL.\'components/autoredirector/css/mgr/main.css\';
+	$modx->regClientCSS($cssFile);
+	break;
+
+    case "OnBeforeDocFormSave":
+        $resources = array(
+                $resource,
+                $modx->getObject(\'modResource\',$resource->get(\'parent\'))
+            );
+        if($child_ids = $modx->getChildIds($resource->id,50,array(\'context\' => $resource->context_key))){
+            $resources = array_merge($resources, $modx->getCollection(\'modResource\',array("id:IN" => $child_ids)));
+        }
+    case "OnResourceBeforeSort":
+        if (empty($resources)) {
+            foreach ($nodes as $node) {
+                $resources[] = $modx->getObject(\'modResource\',$node[\'id\']);
+            }
+        }
+        foreach ($resources as $res) {
+            if (!empty($res)) {
+                if (!$res->getProperty(\'old_uri\',\'autoredirector\')) {
+                    $res->setProperty(\'old_uri\',$res->get(\'uri\'),\'autoredirector\');
+                    $res->save();
+                }
+            }
+        }
+        break;
+    case "OnDocFormSave":
+        $resources = array(
+                $resource,
+                $modx->getObject(\'modResource\',$resource->get(\'parent\'))
+            );
+        if($child_ids = $modx->getChildIds($resource->id,50,array(\'context\' => $resource->context_key))){
+            $resources = array_merge($resources, $modx->getCollection(\'modResource\',array("id:IN" => $child_ids)));
+        }
+    case "OnResourceSort":
+        if (empty($resources)) {
+            foreach ($nodesAffected as $node) {
+                $resources[] = $node;
+            }
+        }
+        $modelPath = $modx->getOption(\'autoredirector_core_path\',null,$modx->getOption(\'core_path\').\'components/autoredirector/\').\'model/\';
+		$modx->addPackage(\'autoredirector\', $modelPath);
+        $processorProps = array(\'processors_path\' => $modx->getOption(\'autoredirector_core_path\',null,$modx->getOption(\'core_path\').\'components/autoredirector/\').\'processors/\');
+        foreach ($resources as $res) {
+            if (!empty($res)) {
+                $old_uri = $res->getProperty(\'old_uri\',\'autoredirector\');
+                $current_uri = $res->getAliasPath($res->get(\'alias\'));
+                if ($old_uri && $current_uri != $old_uri) {
+                    $currentRuleQ = array(\'uri\' => $current_uri);
+                    if (!$modx->getOption(\'global_duplicate_uri_check\')) {
+                        $currentRuleQ[\'context_key\'] = $res->get(\'context_key\');
+                    }
+                    if ($currentRule = $modx->getObject(\'arRule\', $currentRuleQ)) {
+                        $response = $modx->runProcessor(\'mgr/item/remove\', $currentRule->toArray(), $processorProps);
+                        if ($response->isError()) {
+                            $modx->log(modX::LOG_LEVEL_ERROR, \'AutoRedirector removing error. Message: \'.$response->getMessage());
+                        }
+                    }
+                    $arRule = array(\'uri\' => $old_uri
+                        , \'context_key\' => $res->get(\'context_key\')
+                        , \'res_id\' => $res->get(\'id\'));
+                    if (!$modx->getObject(\'arRule\', $arRule)) {
+                        $response = $modx->runProcessor(\'mgr/item/create\', $arRule, $processorProps);
+                        if ($response->isError()) {
+                            $modx->log(modX::LOG_LEVEL_ERROR, \'AutoRedirector creating error. Message: \'.$response->getMessage());
+                        }
+                    }
+                }
+                $res->setProperty(\'old_uri\',$current_uri,\'autoredirector\');
+                $res->save();
+            }
+        }
+        break;
+    case "OnPageNotFound":
+        $uri = $_SERVER[\'REQUEST_URI\'];
+        $uri = str_replace($modx->getOption("site_url"),"",$uri);
+        if (substr($uri, 0, 1) == "/") $uri = substr($uri, 1);
+        $uri = urldecode($uri);
+
+        $RuleQ = array(\'uri\' => $uri);
+        if (!$modx->getOption(\'global_duplicate_uri_check\')) {
+            $RuleQ[\'context_key\'] = $modx->context->get(\'key\');
+        }
+        $modelPath = $modx->getOption(\'autoredirector_core_path\',null,$modx->getOption(\'core_path\').\'components/autoredirector/\').\'model/\';
+    	$modx->addPackage(\'autoredirector\', $modelPath);
+        if ($Rule = $modx->getObject(\'arRule\', $RuleQ)) {
+            if ($url = $modx->makeUrl($Rule->get(\'res_id\'))) {
+                $modx->sendRedirect($url,array(\'responseCode\' => \'HTTP/1.1 301 Moved Permanently\'));
+            }
+        }
+        break;
+}',
+      'locked' => '0',
+      'properties' => NULL,
+      'disabled' => '0',
+      'moduleguid' => '',
+      'static' => '0',
+      'static_file' => 'core/components/autoredirector/elements/plugins/plugin.autoredirector.php',
+    ),
+    25 => 
+    array (
+      'id' => '25',
+      'source' => '1',
+      'property_preprocess' => '0',
+      'name' => 'vpSystem',
+      'description' => '',
+      'editor_type' => '0',
+      'category' => '34',
+      'cache_type' => '0',
+      'plugincode' => '/** @var array $scriptProperties */
+$fqn = $modx->getOption(\'virtualpage_class\', null, \'virtualpage.virtualpage\', true);
+$path = $modx->getOption(\'virtualpage_class_path\', null,
+    $modx->getOption(\'core_path\', null, MODX_CORE_PATH) . \'components/virtualpage/\');
+/** @var virtualpage $virtualpage */
+if (!$virtualpage = $modx->getService($fqn, \'\', $path . \'model/\', array(\'core_path\' => $path))) {
+    return false;
+}
+
+$className = \'virtualpage\' . $modx->event->name;
+$modx->loadClass(\'virtualpagePlugin\', $path . \'model/virtualpage/systems/\', true, true);
+$modx->loadClass($className, $path . \'model/virtualpage/systems/\', true, true);
+if (class_exists($className)) {
+    /** @var $virtualpage $plugin */
+    $plugin = new $className($modx, $scriptProperties);
+    $plugin->run();
+}
+return;',
+      'locked' => '0',
+      'properties' => NULL,
+      'disabled' => '0',
+      'moduleguid' => '',
+      'static' => '0',
+      'static_file' => 'core/components/virtualpage/elements/plugins/plugin.system.php',
+    ),
+    26 => 
+    array (
+      'id' => '26',
+      'source' => '1',
+      'property_preprocess' => '0',
+      'name' => 'microtime',
+      'description' => '',
+      'editor_type' => '0',
+      'category' => '0',
+      'cache_type' => '0',
+      'plugincode' => '$fp = fopen($_SERVER["DOCUMENT_ROOT"] . "/assets/microtime", "w");
+fwrite($fp, microtime());
+fclose($fp);',
+      'locked' => '0',
+      'properties' => 'a:0:{}',
+      'disabled' => '0',
+      'moduleguid' => '',
+      'static' => '0',
+      'static_file' => '',
+    ),
+    27 => 
+    array (
+      'id' => '27',
+      'source' => '1',
+      'property_preprocess' => '0',
+      'name' => 'modHelpers',
+      'description' => '',
+      'editor_type' => '0',
+      'category' => '36',
+      'cache_type' => '0',
+      'plugincode' => 'switch ($modx->event->name) {
+    case \'OnMODXInit\':
+        $loader = $modx->getOption(\'modhelpers_core_path\', null, MODX_CORE_PATH) . \'components/modhelpers/vendor/autoload.php\';
+        if (file_exists($loader)) {
+            require_once $loader;
+            app()->singleton(\'detector\', \'Mobile_Detect\');
+            app()->instance(\'modx\', $modx);
+            app()->singleton(\'request\', function() {
+                /** @var modHelpers\\Request $requestClass */
+                $requestClass = config(\'modhelpers_requestClass\', \'modHelpers\\Request\', true);
+                return $requestClass::capture();
+            });
+            app()->singleton(\'response\', function() use ($modx) {
+                /** @var modHelpers\\ResponseManager $manager */
+                $manager = config(\'modhelpers_responseManager\', \'modHelpers\\ResponseManager\', true);
+                return new $manager($modx);
+            });
+            csrf_token();
+
+            $file = config(\'modhelpers_core_path\',MODX_CORE_PATH) . \'components/modhelpers/config/config.php\';
+            if (file_exists($file)) {
+                $config = include_once $file;
+                if (array_notempty($config)) config($config);
+            }
+        }
+        break;
+}',
+      'locked' => '0',
+      'properties' => NULL,
+      'disabled' => '0',
+      'moduleguid' => '',
+      'static' => '0',
+      'static_file' => 'core/components/modhelpers/elements/plugins/plugin.modhelpers.php',
+    ),
+    28 => 
+    array (
+      'id' => '28',
+      'source' => '1',
+      'property_preprocess' => '0',
+      'name' => 'dellSlashContainer',
+      'description' => 'Плагин убирает "/" для контейнера',
+      'editor_type' => '0',
+      'category' => '0',
+      'cache_type' => '0',
+      'plugincode' => 'if($modx->context->key != "mgr" 
+	&& $modx->getOption(\'friendly_urls\') == true
+	&& substr($_SERVER[\'REQUEST_URI\'], -1) == $modx->getOption(\'container_suffix\')
+	&& $modx->resource->get(\'publishedby\') == 1
+	&& $modx->resource->get(\'isfolder\') == 1
+	&& $modx->resource->get(\'class_key\') == "modDocument") {
+	redirect(substr($_SERVER[\'REQUEST_URI\'],0,-1));
+}',
+      'locked' => '0',
+      'properties' => 'a:0:{}',
+      'disabled' => '0',
+      'moduleguid' => '',
+      'static' => '0',
+      'static_file' => '',
+    ),
+    29 => 
+    array (
+      'id' => '29',
+      'source' => '0',
+      'property_preprocess' => '0',
+      'name' => 'fileTranslit',
+      'description' => 'This plugin transliterates file names automatically on upload.',
+      'editor_type' => '0',
+      'category' => '14',
+      'cache_type' => '0',
+      'plugincode' => '/**
+ * @author Anton Andersen <anton.a.andersen@gmail.com>
+ *
+ * This plugin transliterates filenames on upload via MODX filemanager.
+ * It should be bent to the OnFileManagerUpload event.
+ * Project page: https://github.com/TriAnMan/filetranslit
+ */
+$currentdoc = $modx->newObject(\'modResource\');
+foreach ($files as &$file) {
+	if ($file[\'error\'] == 0) {
+		$newName = $currentdoc->cleanAlias($file[\'name\']);
+
+		//file rename logic
+		if ($file[\'name\'] !== $newName) {
+			$arDirFiles = $source->getObjectsInContainer($directory);
+			foreach ($arDirFiles as &$dirFile){
+				if($dirFile[\'name\']===$newName){
+					//delete file if there is one with new name
+					$source->removeObject($directory . $newName);
+				}
+			}
+			//transliterate uploaded file
+			$source->renameObject($directory . $file[\'name\'], $newName);
+		}
+	}
+}',
+      'locked' => '0',
+      'properties' => NULL,
+      'disabled' => '0',
+      'moduleguid' => '',
+      'static' => '0',
+      'static_file' => '',
+    ),
+    30 => 
+    array (
+      'id' => '30',
+      'source' => '1',
+      'property_preprocess' => '0',
+      'name' => 'AdminTools',
+      'description' => '',
+      'editor_type' => '0',
+      'category' => '39',
+      'cache_type' => '0',
+      'plugincode' => '/** @var array $scriptProperties */
+$path = $modx->getOption(\'admintools_core_path\', null, $modx->getOption(\'core_path\') . \'components/admintools/\').\'model/admintools/\';
+/** @var AdminTools $AdminTools */
+$AdminTools = $modx->getService(\'admintools\',\'AdminTools\',$path);
+$elementType = null;
+if ($AdminTools instanceof AdminTools) {
+    switch ($modx->event->name) {
+        case \'OnManagerPageBeforeRender\':
+            if ($modx->user->id) $AdminTools->initialize();
+            break;
+        case \'OnDocFormSave\':
+            if ($modx->getOption(\'admintools_clear_only_resource_cache\',null,false)) {
+                if ($modx->event->params[\'mode\'] != \'upd\') {
+                    return;
+                }
+                if ($resource->get(\'syncsite\')) {
+                    $AdminTools->clearResourceCache($resource);
+                }
+                if (!empty($_POST[\'createCache\'])) {
+                    $AdminTools->createResourceCache($resource->uri);
+                }
+            }
+            break;
+        case \'OnManagerPageInit\':
+            if (!$modx->user->isAuthenticated(\'mgr\') && $modx->getOption(\'admintools_email_authorization\', null, false)) {
+                $id = (int) $modx->getOption(\'admintools_loginform_resource\');
+                if (!empty($id) && $modx->getCount(\'modResource\', array(\'id\'=>$id, \'published\'=>1, \'deleted\'=>0))) {
+                    $url = $modx->makeUrl($id,\'\',\'\',\'full\');
+                    $modx->setOption(\'manager_login_url_alternate\', $url);
+                }
+            }
+            break;
+        case \'OnManagerAuthentication\':
+            if ($modx->getOption(\'admintools_user_can_login\', null, false)) {
+                $modx->setOption(\'admintools_user_can_login\', false);
+                $modx->event->output(array(\'true\'));
+            }
+            break;
+        case \'OnLoadWebDocument\':
+            if ($modx->user->isAuthenticated($modx->context->get(\'key\')) && (!$modx->user->active || $modx->user->Profile->blocked)) {
+                $modx->runProcessor(\'security/logout\');
+            }
+            if ($modx->getOption(\'admintools_alternative_permissions\', null, false) && !$AdminTools->hasPermissions()){
+                $modx->sendUnauthorizedPage();
+            }
+            break;
+        case \'OnTempFormPrerender\':
+            if ($modx->getOption(\'admintools_template_resource_relationship\', null, true)) {
+                $modx->controller->addLastJavascript($AdminTools->getOption(\'jsUrl\') . \'mgr/templates.js\');
+            }
+            break;
+        case \'OnDocFormPrerender\':
+            $_html = array();
+            if ($modx->getOption(\'admintools_template_resource_relationship\', null, true)) {
+                $_html[\'tpl_res_relationship\'] = \'
+            var tmpl = Ext.getCmp("modx-resource-template");
+            if (tmpl.getValue()) tmpl.label.update(_("resource_template") + "&nbsp;&nbsp;<a href=\\"?a=element/template/update&id=" + tmpl.getValue() + "\\"><i class=\\"icon icon-external-link\\"></i></a>");\';
+            }
+            if ($modx->getOption(\'admintools_clear_only_resource_cache\', null, true) && $resource instanceof modResource) {
+                $_html[\'create_resource_cache\'] = \'
+            var cb = Ext.create({
+                xtype: "xcheckbox",
+                boxLabel: _("admintools_create_resource_cache"),
+                description: _("admintools_create_resource_cache_help"),
+                hideLabel: true,
+                name: "createCache",
+                id: "createCache",
+                checked: false
+            });
+            if (Ext.getCmp("modx-page-settings-right-box-right")) {
+                Ext.getCmp("modx-page-settings-right-box-right").insert(2,cb);
+                Ext.getCmp("modx-page-settings-right-box-left").add(Ext.getCmp("modx-resource-uri-override"));
+                Ext.getCmp("modx-panel-resource").on("success", function(o){
+                    if (o.result.object.createCache != 0) {
+                        cb.setValue(true);
+                    }
+                });
+            }\';
+            }
+            $output = \'\';
+            if (!empty($_html)) {
+            $output .= \'
+    Ext.onReady(function() {
+        setTimeout(function(){\' . implode("\\n", $_html) . \'
+        }, 200);
+    });\';
+            }
+            if ($modx->getOption(\'admintools_alternative_permissions\', null, true) && $modx->hasPermission(\'access_permissions\')) {
+                $modx->controller->addLastJavascript($AdminTools->getOption(\'jsUrl\') . \'mgr/permissions.js\');
+                $output .= \'
+    Ext.ComponentMgr.onAvailable("modx-resource-tabs", function() {
+		this.on("beforerender", function() {
+			this.add({
+				title: _("admintools_permissions"),
+				border: false,
+				items: [{
+					layout: "anchor",
+					border: false,
+					items: [{
+						html: _("admintools_permissions_desc"),
+						border: false,
+						bodyCssClass: "panel-desc"
+					}, {
+						xtype: "admintools-grid-permissions",
+						anchor: "100%",
+						cls: "main-wrapper",
+						resource: \' . $id . \'
+					}]
+				}]
+			});
+		});
+	});
+\';
+            }
+            if (!empty($output)) $modx->controller->addHtml(\'<script type="text/javascript">\' . $output . \'</script>\');
+            break;
+        /*case \'OnWebPagePrerender\':
+            $output = &$modx->resource->_output;
+            $replace = "";
+            preg_replace(\'/</script>/\', $replace, $output, 1);
+            break;*/
+    }
+}',
+      'locked' => '0',
+      'properties' => NULL,
+      'disabled' => '0',
+      'moduleguid' => '',
+      'static' => '0',
+      'static_file' => 'core/components/admintools/elements/plugins/plugin.admintools.php',
     ),
   ),
   'policies' => 

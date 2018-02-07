@@ -1,0 +1,118 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '81b5bb39e6b28bb157ce1a38030ec115' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '949969aba1bca056e6ec1a554e0f0682' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnDocFormSave","priority":1000,"propertyset":0}',
+              'guid' => 'e0bbd46e3d66c4d40426782e650797bd',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnDocFormSave',
+              ),
+              'signature' => 'dfa412bfc4ae62806fa1a2e5761359ca',
+            ),
+            '260ee1e91ce3cd257474b26609245dae' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnSiteRefresh","priority":1000,"propertyset":0}',
+              'guid' => '24917560025f20430eadd03cfba05c43',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnSiteRefresh',
+              ),
+              'signature' => 'a44a99846087a0cebf74054565144442',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":1,"source":0,"property_preprocess":0,"name":"cacheregenerator","description":"cacheregenerator_desc","editor_type":0,"category":0,"cache_type":0,"plugincode":"if(!function_exists(\'cacheRegenerate\')){\\n    function cacheRegenerate($scriptProperties, $id = 0){\\n        global $modx;\\n        \\n        @error_reporting(false);\\n        \\n        \\/\\/ Hack. Prevent headers\\n        print \\" \\";\\n        \\n        $placeholders = $modx->placeholders;\\n        \\n        ini_set(\'max_execution_time\', 3600);\\n        ignore_user_abort(1);\\n        \\n        $modx->user = $modx->newObject(\\"modUser\\");\\n            \\n        $modx->request = null;\\n        \\n        $modx->getRequest();\\n        \\n        $q = $modx->newQuery(\'modResource\',[\\n            \\"class_key:not in\\"  => array(\\"modWebLink\\", \\"modSymLink\\"),\\n        ]);\\n        \\n        $q->select(array(\\n            \\"id\\",    \\n            \\"context_key\\",    \\n        ));\\n        \\n        # $q->where(array(\\n        #     \\"id:in\\" => array()\\n        # ));\\n        \\n        \\n        \\n        if($id){\\n            $q->where((int)$id);\\n        }\\n        else{\\n            $q->where(array(\\n                \\"deleted\\"   => 0,\\n                \\"published\\" => 1,\\n                \\"cacheable\\" => 1,\\n            ));\\n        }   \\n        \\n        \\n        \\/\\/ Exclude by id\\n        if($exclude_docs_id = trim($modx->getOption(\\"cacheregenerator.exclude_docs_id\\", $scriptProperties, false))){\\n            $q->where(array(\\n                \\"id:not in\\" => explode(\\",\\", $exclude_docs_id),\\n            ));\\n        }\\n        \\n        \\/\\/ Exclude by templates\\n        if($exclude_doc_templates_id = trim($modx->getOption(\\"cacheregenerator.exclude_doc_templates_id\\", $scriptProperties, false))){\\n            $q->where(array(\\n                \\"template:not in\\" => explode(\\",\\", $exclude_doc_templates_id),\\n            ));\\n        }\\n        \\n        if(!$modx->getOption(\\"cacheregenerator.regenerate_unsearchable_docs\\", $scriptProperties, true)){\\n            $q->where(array(\\n                \\"searchable\\" => 1,\\n            ));\\n        }\\n        \\n        $s = $q->prepare();\\n        \\n        # print $q->toSQL();\\n        \\n        $s->execute();\\n        \\n        $i = 0;\\n        \\n        while($row = $s->fetch(2)){\\n            if(!(int)$row[\'id\']){\\n                continue;\\n            }\\n            \\n            if(\\n                $modx->context->key != $row[\'context_key\']\\n                AND !$modx->switchContext($row[\'context_key\'])\\n            ){\\n                continue;\\n            }\\n            \\n            $modx->resourceIdentifier = $row[\'id\'];\\n            $_REQUEST[\'id\'] = $modx->resourceIdentifier;\\n            \\n            $modx->jscripts = array();\\n            $modx->sjscripts = array();\\n            $modx->loadedjscripts = array();\\n            \\n            if(\\n                $resource = $modx->getObject(\\"modResource\\", $modx->resourceIdentifier)\\n                AND $resource->checkPolicy(\'load\')\\n                AND $resource->checkPolicy(\'view\')\\n                AND $modx->resource = $modx->request->getResource(\'id\', $modx->resourceIdentifier)\\n            ){\\n                \\n                \\n                if(!$modx->resource->getProcessed()){\\n                    \\n                    if(!($modx->resource instanceof modDocument)){\\n                        continue;\\n                    }\\n                    \\n                    if(\\n                        $i = ob_get_level()\\n                        AND $i > 0\\n                    ){\\n                        while($i > 0){\\n                            ob_end_flush();\\n                            $i--;\\n                        }\\n                    }\\n                    \\n                    $modx->placeholders = $placeholders;\\n                    \\n                    $modx->elementCache = array();\\n                    \\n                    unset($modx->smarty, $modx->services[\'smarty\']);\\n                    \\n                    $modx->invokeEvent(\\"OnHandleRequest\\");\\n                    \\n                    $modx->resource->_output= $modx->resource->process();\\n                    \\n                    if($modx->jscripts){\\n                        $modx->resource->set(\\"_jscripts\\", $modx->jscripts);\\n                    }\\n                    \\n                    if($modx->sjscripts){\\n                        $modx->resource->set(\\"_sjscripts\\", $modx->sjscripts);\\n                    }\\n                    \\n                    if($modx->loadedjscripts){\\n                        $modx->resource->set(\\"_loadedjscripts\\", $modx->loadedjscripts);\\n                    }\\n                    \\n                    $options = array();\\n                    \\n                    \\n                    $modx->getParser();\\n                    $maxIterations= intval($modx->getOption(\'parser_max_iterations\', $options, 10));\\n                    $modx->parser->processElementTags(\'\', $modx->resource->_output, true, false, \'[[\', \']]\', array(), $maxIterations);\\n                    $modx->parser->processElementTags(\'\', $modx->resource->_output, true, true, \'[[\', \']]\', array(), $maxIterations);\\n                    \\n                    \\n                    \\/*FIXME: only do this for HTML content ?*\\/\\n                    if (strpos($modx->resource->ContentType->mime_type, \'text\\/html\') !== false) {\\n                        \\/* Insert Startup jscripts & CSS scripts into template - template must have a <\\/head> tag *\\/\\n                        if (($js= $modx->getRegisteredClientStartupScripts()) && (strpos($modx->resource->_output, \'<\\/head>\') !== false)) {\\n                            \\/* change to just before closing <\\/head> *\\/\\n                            $modx->resource->_output= preg_replace(\\"\\/(<\\\\\\/head>)\\/i\\", $js . \\"\\\\n\\\\\\\\1\\", $modx->resource->_output,1);\\n                        }\\n                    \\n                        \\/* Insert jscripts & html block into template - template must have a <\\/body> tag *\\/\\n                        if ((strpos($modx->resource->_output, \'<\\/body>\') !== false) && ($js= $modx->getRegisteredClientScripts())) {\\n                            $modx->resource->_output= preg_replace(\\"\\/(<\\\\\\/body>)\\/i\\", $js . \\"\\\\n\\\\\\\\1\\", $modx->resource->_output,1);\\n                        }\\n                    }\\n                    \\n                    $modx->beforeRender();\\n                    $modx->error->reset();\\n                    \\n                    $modx->cacheManager->generateResource($modx->resource);\\n                    $modx->error->reset();\\n                    \\n                    ob_start();\\n                    \\n                    $i++;\\n                }\\n                \\n                $modx->error->reset();\\n            }\\n            \\n            $modx->error->reset();\\n        }\\n        $modx->error->reset();\\n        \\n    }\\n}\\n\\n\\nswitch($modx->event->name){\\n    \\n    case \'OnDocFormSave\':\\n        \\n        if(\\n            !empty($object) \\n            AND ($object instanceof modResource)\\n            AND !$object->syncsite\\n            AND !$object->clearCache\\n        ){\\n            \\n            $object->clearCache($object->context_key);\\n            \\n            cacheRegenerate($scriptProperties, $object->id);\\n            $modx->error->reset();\\n            \\n            \\/\\/ Regenerate all resources\\n            if($modx->getOption(\\"cacheregenerator.regenerate_docs_on_doc_save\\", $scriptProperties, false)){\\n                cacheRegenerate($scriptProperties);\\n            }\\n            $modx->error->reset();\\n        }\\n        \\n        break;\\n    \\n    case \'OnSiteRefresh\':\\n            \\n        \\/\\/ Regenerate all resources\\n        if($modx->getOption(\\"cacheregenerator.regenerate_docs_on_site_refresh\\", $scriptProperties, false)){\\n            cacheRegenerate($scriptProperties);\\n        }\\n        break;\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"","content":"if(!function_exists(\'cacheRegenerate\')){\\n    function cacheRegenerate($scriptProperties, $id = 0){\\n        global $modx;\\n        \\n        @error_reporting(false);\\n        \\n        \\/\\/ Hack. Prevent headers\\n        print \\" \\";\\n        \\n        $placeholders = $modx->placeholders;\\n        \\n        ini_set(\'max_execution_time\', 3600);\\n        ignore_user_abort(1);\\n        \\n        $modx->user = $modx->newObject(\\"modUser\\");\\n            \\n        $modx->request = null;\\n        \\n        $modx->getRequest();\\n        \\n        $q = $modx->newQuery(\'modResource\',[\\n            \\"class_key:not in\\"  => array(\\"modWebLink\\", \\"modSymLink\\"),\\n        ]);\\n        \\n        $q->select(array(\\n            \\"id\\",    \\n            \\"context_key\\",    \\n        ));\\n        \\n        # $q->where(array(\\n        #     \\"id:in\\" => array()\\n        # ));\\n        \\n        \\n        \\n        if($id){\\n            $q->where((int)$id);\\n        }\\n        else{\\n            $q->where(array(\\n                \\"deleted\\"   => 0,\\n                \\"published\\" => 1,\\n                \\"cacheable\\" => 1,\\n            ));\\n        }   \\n        \\n        \\n        \\/\\/ Exclude by id\\n        if($exclude_docs_id = trim($modx->getOption(\\"cacheregenerator.exclude_docs_id\\", $scriptProperties, false))){\\n            $q->where(array(\\n                \\"id:not in\\" => explode(\\",\\", $exclude_docs_id),\\n            ));\\n        }\\n        \\n        \\/\\/ Exclude by templates\\n        if($exclude_doc_templates_id = trim($modx->getOption(\\"cacheregenerator.exclude_doc_templates_id\\", $scriptProperties, false))){\\n            $q->where(array(\\n                \\"template:not in\\" => explode(\\",\\", $exclude_doc_templates_id),\\n            ));\\n        }\\n        \\n        if(!$modx->getOption(\\"cacheregenerator.regenerate_unsearchable_docs\\", $scriptProperties, true)){\\n            $q->where(array(\\n                \\"searchable\\" => 1,\\n            ));\\n        }\\n        \\n        $s = $q->prepare();\\n        \\n        # print $q->toSQL();\\n        \\n        $s->execute();\\n        \\n        $i = 0;\\n        \\n        while($row = $s->fetch(2)){\\n            if(!(int)$row[\'id\']){\\n                continue;\\n            }\\n            \\n            if(\\n                $modx->context->key != $row[\'context_key\']\\n                AND !$modx->switchContext($row[\'context_key\'])\\n            ){\\n                continue;\\n            }\\n            \\n            $modx->resourceIdentifier = $row[\'id\'];\\n            $_REQUEST[\'id\'] = $modx->resourceIdentifier;\\n            \\n            $modx->jscripts = array();\\n            $modx->sjscripts = array();\\n            $modx->loadedjscripts = array();\\n            \\n            if(\\n                $resource = $modx->getObject(\\"modResource\\", $modx->resourceIdentifier)\\n                AND $resource->checkPolicy(\'load\')\\n                AND $resource->checkPolicy(\'view\')\\n                AND $modx->resource = $modx->request->getResource(\'id\', $modx->resourceIdentifier)\\n            ){\\n                \\n                \\n                if(!$modx->resource->getProcessed()){\\n                    \\n                    if(!($modx->resource instanceof modDocument)){\\n                        continue;\\n                    }\\n                    \\n                    if(\\n                        $i = ob_get_level()\\n                        AND $i > 0\\n                    ){\\n                        while($i > 0){\\n                            ob_end_flush();\\n                            $i--;\\n                        }\\n                    }\\n                    \\n                    $modx->placeholders = $placeholders;\\n                    \\n                    $modx->elementCache = array();\\n                    \\n                    unset($modx->smarty, $modx->services[\'smarty\']);\\n                    \\n                    $modx->invokeEvent(\\"OnHandleRequest\\");\\n                    \\n                    $modx->resource->_output= $modx->resource->process();\\n                    \\n                    if($modx->jscripts){\\n                        $modx->resource->set(\\"_jscripts\\", $modx->jscripts);\\n                    }\\n                    \\n                    if($modx->sjscripts){\\n                        $modx->resource->set(\\"_sjscripts\\", $modx->sjscripts);\\n                    }\\n                    \\n                    if($modx->loadedjscripts){\\n                        $modx->resource->set(\\"_loadedjscripts\\", $modx->loadedjscripts);\\n                    }\\n                    \\n                    $options = array();\\n                    \\n                    \\n                    $modx->getParser();\\n                    $maxIterations= intval($modx->getOption(\'parser_max_iterations\', $options, 10));\\n                    $modx->parser->processElementTags(\'\', $modx->resource->_output, true, false, \'[[\', \']]\', array(), $maxIterations);\\n                    $modx->parser->processElementTags(\'\', $modx->resource->_output, true, true, \'[[\', \']]\', array(), $maxIterations);\\n                    \\n                    \\n                    \\/*FIXME: only do this for HTML content ?*\\/\\n                    if (strpos($modx->resource->ContentType->mime_type, \'text\\/html\') !== false) {\\n                        \\/* Insert Startup jscripts & CSS scripts into template - template must have a <\\/head> tag *\\/\\n                        if (($js= $modx->getRegisteredClientStartupScripts()) && (strpos($modx->resource->_output, \'<\\/head>\') !== false)) {\\n                            \\/* change to just before closing <\\/head> *\\/\\n                            $modx->resource->_output= preg_replace(\\"\\/(<\\\\\\/head>)\\/i\\", $js . \\"\\\\n\\\\\\\\1\\", $modx->resource->_output,1);\\n                        }\\n                    \\n                        \\/* Insert jscripts & html block into template - template must have a <\\/body> tag *\\/\\n                        if ((strpos($modx->resource->_output, \'<\\/body>\') !== false) && ($js= $modx->getRegisteredClientScripts())) {\\n                            $modx->resource->_output= preg_replace(\\"\\/(<\\\\\\/body>)\\/i\\", $js . \\"\\\\n\\\\\\\\1\\", $modx->resource->_output,1);\\n                        }\\n                    }\\n                    \\n                    $modx->beforeRender();\\n                    $modx->error->reset();\\n                    \\n                    $modx->cacheManager->generateResource($modx->resource);\\n                    $modx->error->reset();\\n                    \\n                    ob_start();\\n                    \\n                    $i++;\\n                }\\n                \\n                $modx->error->reset();\\n            }\\n            \\n            $modx->error->reset();\\n        }\\n        $modx->error->reset();\\n        \\n    }\\n}\\n\\n\\nswitch($modx->event->name){\\n    \\n    case \'OnDocFormSave\':\\n        \\n        if(\\n            !empty($object) \\n            AND ($object instanceof modResource)\\n            AND !$object->syncsite\\n            AND !$object->clearCache\\n        ){\\n            \\n            $object->clearCache($object->context_key);\\n            \\n            cacheRegenerate($scriptProperties, $object->id);\\n            $modx->error->reset();\\n            \\n            \\/\\/ Regenerate all resources\\n            if($modx->getOption(\\"cacheregenerator.regenerate_docs_on_doc_save\\", $scriptProperties, false)){\\n                cacheRegenerate($scriptProperties);\\n            }\\n            $modx->error->reset();\\n        }\\n        \\n        break;\\n    \\n    case \'OnSiteRefresh\':\\n            \\n        \\/\\/ Regenerate all resources\\n        if($modx->getOption(\\"cacheregenerator.regenerate_docs_on_site_refresh\\", $scriptProperties, false)){\\n            cacheRegenerate($scriptProperties);\\n        }\\n        break;\\n}"}',
+        'guid' => '036c27a397f6891bddf40b20a0041c01',
+        'native_key' => 1,
+        'signature' => '6df1bd0b6d58faa469c854876753c918',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'cacheregenerator',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"cacheregenerator-1.0.0-beta\\/modCategory\\/264d2a2cb0c2b052e7aaf48bf104f12e\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"cacheregenerator"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '8e3c79c58b3a9b68fbf303c2ff6ef8e7',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '264d2a2cb0c2b052e7aaf48bf104f12e',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"cacheRegenerator","rank":0}',
+);

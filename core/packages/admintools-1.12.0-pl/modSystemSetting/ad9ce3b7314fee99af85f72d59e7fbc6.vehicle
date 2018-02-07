@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'admintools',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '4a2a1df7da01c2aee5d6bf8b3b2a38c9',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'ad9ce3b7314fee99af85f72d59e7fbc6',
+  'native_key' => 'admintools_loginform_resource',
+  'object' => '{"key":"admintools_loginform_resource","value":"","xtype":"numberfield","namespace":"admintools","area":"admintools_authorization","editedon":null}',
+);

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'ytranslit',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'bc6b347df53f345a7e18fb6c1cc37041',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '9d0457f13d2eb5a90ca1eca4cba97093',
+  'native_key' => 'friendly_alias_ytranslit_timeout',
+  'object' => '{"key":"friendly_alias_ytranslit_timeout","value":1,"xtype":"numberfield","namespace":"ytranslit","area":"","editedon":null}',
+);

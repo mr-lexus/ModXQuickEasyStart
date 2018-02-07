@@ -1,0 +1,59 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => true,
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'websocketphp',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"websocketphp-1.0.0-beta\\/modCategory\\/17f15b7283dd5af807de3f5a137ff479\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"websocketphp"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd0e4c2fe40ed2fac70d0df0f4bd8a8e0',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '17f15b7283dd5af807de3f5a137ff479',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"websocketphp","rank":0}',
+);

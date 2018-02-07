@@ -1,0 +1,50 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'unique_key' => 'text',
+  'related_objects' => 
+  array (
+    'Action' => 
+    array (
+      'ce852e89625654ff1eebdebeaf78f3b9' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'namespace',
+          1 => 'controller',
+        ),
+        'class' => 'modAction',
+        'object' => '{"id":0,"namespace":"virtualpage","controller":"index","haslayout":1,"lang_topics":"virtualpage:default","assets":"","help_url":"","parent":0}',
+        'guid' => 'f04c38d6ec4fc4f2c12cfb5e391b5d2a',
+        'native_key' => 0,
+        'signature' => '821daa1c349e66cdc1e5ce8b7219f5bb',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Action' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'namespace',
+        1 => 'controller',
+      ),
+    ),
+  ),
+  'namespace' => 'virtualpage',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd088ec51d5cd3cf1cd5f0b5fbca514f7',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => '3ed7307d5c03e025d56177c52172829a',
+  'native_key' => 'virtualpage',
+  'object' => '{"text":"virtualpage","parent":"components","action":0,"description":"virtualpage_menu_desc","icon":"images\\/icons\\/plugin.gif","menuindex":0,"params":"","handler":"","permissions":"","namespace":"core"}',
+);

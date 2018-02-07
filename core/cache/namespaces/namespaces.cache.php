@@ -5,6 +5,30 @@
     'path' => '/home/lexus/server/modx-revo-assembly.tool/core/components/ace/',
     'assets_path' => '',
   ),
+  'admintools' => 
+  array (
+    'name' => 'admintools',
+    'path' => '/home/lexus/server/modx-revo-assembly.tool/core/components/admintools/',
+    'assets_path' => '',
+  ),
+  'ajaxmanager' => 
+  array (
+    'name' => 'ajaxmanager',
+    'path' => '/home/lexus/server/modx-revo-assembly.tool/core/components/ajaxmanager/',
+    'assets_path' => '',
+  ),
+  'autoredirector' => 
+  array (
+    'name' => 'autoredirector',
+    'path' => '/home/lexus/server/modx-revo-assembly.tool/core/components/autoredirector/',
+    'assets_path' => '',
+  ),
+  'cacheregenerator' => 
+  array (
+    'name' => 'cacheregenerator',
+    'path' => '/home/lexus/server/modx-revo-assembly.tool/core/components/cacheregenerator/',
+    'assets_path' => '/home/lexus/server/modx-revo-assembly.tool/assets/components/cacheregenerator/',
+  ),
   'clientconfig' => 
   array (
     'name' => 'clientconfig',
@@ -47,11 +71,23 @@
     'path' => '/home/lexus/server/modx-revo-assembly.tool/core/components/elementnotes/',
     'assets_path' => '',
   ),
+  'filetranslit' => 
+  array (
+    'name' => 'filetranslit',
+    'path' => '/home/lexus/server/modx-revo-assembly.tool/core/components/filetranslit/',
+    'assets_path' => '',
+  ),
   'migx' => 
   array (
     'name' => 'migx',
     'path' => '/home/lexus/server/modx-revo-assembly.tool/core/components/migx/',
     'assets_path' => '/home/lexus/server/modx-revo-assembly.tool/assets/components/migx/',
+  ),
+  'modhelpers' => 
+  array (
+    'name' => 'modhelpers',
+    'path' => '/home/lexus/server/modx-revo-assembly.tool/core/components/modhelpers/',
+    'assets_path' => '',
   ),
   'modxsite' => 
   array (
@@ -105,6 +141,18 @@
   array (
     'name' => 'versionx',
     'path' => '/home/lexus/server/modx-revo-assembly.tool/core/components/versionx/',
+    'assets_path' => '',
+  ),
+  'virtualpage' => 
+  array (
+    'name' => 'virtualpage',
+    'path' => '/home/lexus/server/modx-revo-assembly.tool/core/components/virtualpage/',
+    'assets_path' => '',
+  ),
+  'ytranslit' => 
+  array (
+    'name' => 'ytranslit',
+    'path' => '/home/lexus/server/modx-revo-assembly.tool/core/components/ytranslit/',
     'assets_path' => '',
   ),
 );

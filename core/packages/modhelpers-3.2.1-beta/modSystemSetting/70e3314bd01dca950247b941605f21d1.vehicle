@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'modhelpers',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ee24a4351c72768edcb2f1b1a1433fdd',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '70e3314bd01dca950247b941605f21d1',
+  'native_key' => 'modhelpers_chunks_path',
+  'object' => '{"key":"modhelpers_chunks_path","value":"{core_path}elements\\/chunks","xtype":"textfield","namespace":"modhelpers","area":"modhelpers_main","editedon":null}',
+);

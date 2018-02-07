@@ -1,0 +1,36 @@
+Changelog for yTranslit.
+
+1.2.0 pl (16.01.2016)
+============
+- [#3] [#4] Fixed wrong log entries in MODX 2.4.2
+- Code refactor to PSR-2.
+- Correct save and restore existing translit system settings.
+
+1.1.2 pl (05.12.2014)
+============
+- Updated description of ytranslit_key setting.
+
+1.1.1 pl (25.01.2014)
+============
+- Improved processing of filenames.
+
+1.1.0 pl1 (04.01.2014)
+============
+- Some small fixes
+
+1.1.0 pl1 (08.09.2013)
+============
+- Fixed ExtJS type of system setting "ytranslit_timeout".
+
+1.1.0 pl (05.08.2013)
+============
+- Support of Yandex translate api 1.5. Api key is now required!
+
+1.0.1 pl (19.09.2012)
+============
+- Added system parameter friendly_alias_ytranslit_timeout, for CURL timeout
+- Added system parameter friendly_alias_ytranslit_exclude, for those pagetitle, that will not be send on service.
+
+1.0.0 pl (18.09.212)
+============
+- Initial release.

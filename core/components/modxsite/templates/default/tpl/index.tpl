@@ -1,0 +1,1 @@
+{$modx->resource->get('content')}

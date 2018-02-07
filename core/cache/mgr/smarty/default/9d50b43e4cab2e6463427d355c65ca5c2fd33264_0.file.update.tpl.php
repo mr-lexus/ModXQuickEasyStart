@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2018-01-14 21:34:47
+<?php /* Smarty version 3.1.27, created on 2018-01-28 22:56:12
          compiled from "/home/lexus/server/modx-revo-assembly.tool/manager/templates/default/resource/update.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1091901765a5ba2c7ac20b7_86535638%%*/
+/*%%SmartyHeaderCode:4986540855a6e2adc8aea63_47599355%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -13,7 +13,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1091901765a5ba2c7ac20b7_86535638',
+  'nocache_hash' => '4986540855a6e2adc8aea63_47599355',
   'variables' => 
   array (
     'tvOutput' => 0,
@@ -26,13 +26,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a5ba2c7aced57_56646049',
+  'unifunc' => 'content_5a6e2adc9b71c0_48562182',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a5ba2c7aced57_56646049')) {
-function content_5a5ba2c7aced57_56646049 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a6e2adc9b71c0_48562182')) {
+function content_5a6e2adc9b71c0_48562182 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1091901765a5ba2c7ac20b7_86535638';
+$_smarty_tpl->properties['nocache_hash'] = '4986540855a6e2adc8aea63_47599355';
 ?>
 <div id="modx-panel-resource-div"></div>
 <div id="modx-resource-tvs-div"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['tvOutput']->value)===null||$tmp==='' ? '' : $tmp);?>

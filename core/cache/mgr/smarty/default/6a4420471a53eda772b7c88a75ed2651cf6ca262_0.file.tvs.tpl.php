@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2018-01-14 21:34:47
+<?php /* Smarty version 3.1.27, created on 2018-01-28 22:56:12
          compiled from "/home/lexus/server/modx-revo-assembly.tool/manager/templates/default/resource/sections/tvs.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:6832909975a5ba2c7771d61_56807028%%*/
+/*%%SmartyHeaderCode:15170898685a6e2adc46b9e0_86564978%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -13,7 +13,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '6832909975a5ba2c7771d61_56807028',
+  'nocache_hash' => '15170898685a6e2adc46b9e0_86564978',
   'variables' => 
   array (
     'OnResourceTVFormPrerender' => 0,
@@ -29,14 +29,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a5ba2c77b3968_43700657',
+  'unifunc' => 'content_5a6e2adc590ab5_52423111',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a5ba2c77b3968_43700657')) {
-function content_5a5ba2c77b3968_43700657 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a6e2adc590ab5_52423111')) {
+function content_5a6e2adc590ab5_52423111 ($_smarty_tpl) {
 if (!is_callable('smarty_function_cycle')) require_once '/home/lexus/server/modx-revo-assembly.tool/core/model/smarty/plugins/function.cycle.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '6832909975a5ba2c7771d61_56807028';
+$_smarty_tpl->properties['nocache_hash'] = '15170898685a6e2adc46b9e0_86564978';
 echo $_smarty_tpl->tpl_vars['OnResourceTVFormPrerender']->value;?>
 
 

@@ -1,0 +1,134 @@
+3.2.1-beta
+==============
+- Changed syntax for file elements with the relative path.
+- Fixed the filter method of the Request class.
+
+3.2.0-beta
+==============
+- Added a new function "response".
+- Renamed files of the classes.
+- In the functions chunk() and snippet() you can specify the name with a relative path (if you use file elements).
+- Added file "config/config.php" to add custom system settings. Can be helpful in testing mode.
+
+3.1.1-beta
+==============
+- Fixed broken compatibility with PHP 5.5.
+
+3.1.0-beta
+==============
+- Added method "getCsrfToken" to the Request class.
+- Added method "checkCsrfToken" to the Request class.
+- Added method "isBot" to the Request class.
+- Added "bot_user_agents" system setting.
+- Added a new function "csrf_token".
+- Added a new function "csrf_field".
+- Added a new function "csrf_meta".
+- Changed the priority of the library loading.
+
+3.0.1-beta
+==============
+- Added a new function "echo_br".
+- Fixed bug with loading the ModelColunm class.
+- Removed debug info.
+- Updated the Faker library.
+
+3.0.0-beta
+==============
+- IMPORTANT! Added namespace "modHelpers" to the modHelpers' classes.
+- Requirement of the minimum PHP version is changed to 5.5.
+- Added a new function "request".
+- Added a new function "switch_context".
+- Added a new method "object" to the Object class.
+- Added a new method "parent" to the Object class.
+- Added a new method "first" to the Query class.
+- Added a new method "toString" to the Query class.
+- Added a new method "remember" to the CacheManager class.
+- All classes can be extended.
+
+2.1.0-pl
+==============
+- Added function "is_tablet".
+- Added function "is_desktop".
+- Added function "app".
+- Added function "filter_data".
+- Added function "null_if".
+- Added the "relogin" parameter to the "logout" function.
+- Improve the "pls" function.
+- Improve the "parse" function.
+
+2.0.0-pl
+==============
+- IMPORTANT! Changed the signature of the session() function. To put data to the session use an array.
+- Added function "session_pull".
+- Added function "default_if".
+- Added method "log" to the modHelpersMailer class. It can be helpful for testing.
+- Added method "toArray" to the modHelpersMailer class.
+- Added method "tpl" to the modHelpersMailer class which set a chunk for the email content.
+
+1.4.0-beta
+==============
+- Added function "is_mobile".
+- Added function "array_empty".
+- Added function "array_notempty".
+- Added functions "array_trim", "array_ltrim" and "array_rtrim".
+- Added functions "explode_trim", "explode_ltrim" and "explode_rtrim".
+- Added function "echo_nl".
+- Added function "print_str".
+- Added function "print_d".
+- Added function "parse".
+- Added function "str_between".
+- Added function "str_limit".
+- Added functions - "str_starts", "str_ends", "str_contains" and "str_match".
+- Added the queue functionality to the mailer class.
+- The log functions can output objects which have the "toArray" method.
+- Code refactoring.
+
+1.3.0-beta
+==============
+- Added function "login".
+- Added function "logout".
+- Added function "is_ajax".
+- Fixed some bugs.
+
+1.2.0-beta
+==============
+- Added function "load_model" for a custom table or base objects.
+- Added method "joinGroup" to the collection class for users and resources.
+- Added method "leaveGroup" to the collection class for users and resources.
+- Added method "whereIn" to the collection class.
+- Added method "whereNotIn" to the collection class.
+- Added method "whereLike" to the collection class.
+- Added method "whereNotLike" to the collection class.
+- Added method "whereIsNull" to the collection class.
+- Added method "whereIsNotNull" to the collection class.
+- Added class modHelpersMailer which allows to use chains of methods.
+- Removed the functions "pdotools" and "pdofetch".
+
+1.1.0-beta
+==============
+- Added function "faker" which generates fake data.
+- Added function "img".
+- Added method "whereExists" to the collection class.
+- Added method "whereNotExists" to the collection class.
+- Added method "elements" to the collection class.
+
+1.0.2-beta
+==============
+- Renamed "esc" function to "escape".
+- Added "memory" function.
+- Added "forward" function.
+- Added "orWhere" method to the collection class.
+- Added "each" method to the collection class.
+- Added "union" method to the collection class.
+- Added "members" method to the collection class.
+- Added an ability to pass a Closure to the collection functions.
+
+
+1.0.1-beta
+==============
+- Renamed the log functions.
+- Added "withTV" method to the collection class.
+
+1.0.0-beta
+==============
+- Initial release.
